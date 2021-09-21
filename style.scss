@@ -1,0 +1,118 @@
+$load-up-border-color: orange;
+$load-up-border-degree: 15deg;
+$load-up-animation-size: 350px;
+$load-up-animation-multiplier: 4;
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    border: 5px solid black;
+}
+
+#load-in-animation-outer {
+    width: $load-up-animation-size;
+    height: $load-up-animation-size;
+    border: 5px solid black;
+    border-radius: 60%;
+    
+    animation-name: start-up-circle;
+    animation-duration: 4s;
+    animation-direction: alternate;
+}
+
+#load-in-animation-inner {
+    position: relative;
+    width: 94%;
+    height: 94%;
+    top: 1.8%;
+    left: 1.8%;
+    border: 5px solid black;
+    border-radius: 60%;
+    background-color: white;
+}
+
+#main-splatter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background: url('./images/splatter1-lg.png') no-repeat center;
+    border: 5px solid black;
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+}
+
+@mixin load-up-size($new-size) {    
+    #load-in-animation-outer {
+        width: $new-size;
+        height: $new-size;
+    }
+}
+
+@media (max-width: 1201px) {
+    @include load-up-size($new-size: 300px);
+
+    #main-splatter {
+        background: url('./images/splatter1.png') no-repeat center;
+    }
+}
+
+@media (max-width: 1024px) {
+    @include load-up-size($new-size: 250px);
+    #load-in-animation-inner{
+        top: 1%;
+        left: 1%;
+    }
+
+    #main-splatter {
+        background: url('./images/splatter1-med1.png') no-repeat center;
+    }
+}
+
+@media (max-width: 768px) {
+    @include load-up-size($new-size: 200px);
+    #load-in-animation-inner{
+        top: 0.5%;
+        left: 0.5%;
+    }
+
+    #main-splatter {
+        background: url('./images/splatter1-med.png') no-repeat center;
+    }
+}
+
+@media (max-width: 480px) {
+    @include load-up-size($new-size: 150px);
+    #load-in-animation-inner{
+        top: 0.1%;
+        left: 0.1%;
+    }
+
+    #main-splatter {
+        background: url('./images/splatter1-sm.png') no-repeat center;
+    }
+}
+
+@keyframes start-up-circle {
+    @for $i from 1 through 25 {
+        #{$i}% {
+            background: conic-gradient(
+                $load-up-border-color calc(3.6 * #{$i * $load-up-animation-multiplier}deg), 
+                transparent calc((3.6 * #{$i * $load-up-animation-multiplier}deg) + 0.5deg) 100%
+            );
+        }
+    }
+
+    26% { transform: scale(1) translateY(0); }
+    30% { transform: scale(1.2, 0.6); }
+    40% { transform: scale(0.8, 1.1) translateY(-250px); }
+    50% { transform: scale(1.2, 0.6) translateY(90px); }
+}
+
