@@ -41,6 +41,33 @@ window.addEventListener('scroll', function(event) {
 });
 
 /* ======= Work and Experience Modal Changer ======= */
+const uoButton = document.getElementById('uo');
+const uoLawButton = document.getElementById('uo-law');
+const pasButton = document.getElementById('pas');
 
-// Keep one of the options clicked first by default
-document.getElementById('uo').click();
+// change which modal is visible from clicking each of the buttons
+let idToButton = {
+    'uo': uoButton,
+    'uo-law': uoLawButton,
+    'pas': pasButton
+};
+
+let idToModal = {
+    'uo': 'uo-modal',
+    'uo-law': 'uo-law-modal',
+    'pas': 'pas-modal'
+};
+
+for(let id in idToButton) {
+    idToButton[id].addEventListener('click', (event) => {
+        let modal = document.getElementsByClassName(idToModal[id])[0];
+        modal.style.display = 'block';
+
+        for(let otherModalId in idToModal) {
+            if(otherModalId !== id) {
+                let otherModal = document.getElementsByClassName(idToModal[otherModalId])[0];
+                otherModal.style.display = 'none';
+            }
+        }
+    });
+}

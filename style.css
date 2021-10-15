@@ -341,8 +341,12 @@ section, aside {
     padding: 1em;
 }
 
-.uo-modal {
+.uo-modal, .uo-law-modal {
     border: 4px solid var(--uo-primary);
+}
+
+.uo-law-modal, .pas-modal {
+    display: none;
 }
 
 .pas-modal {
@@ -373,7 +377,6 @@ hr.pas-sep {
 .job-activities li::before,
 .job-activities ul li::before {
     content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-    /* color: var(--primary-green); */
     font-weight: bold;
     display: inline-block;
     width: 1em;
