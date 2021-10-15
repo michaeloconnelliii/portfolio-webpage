@@ -40,3 +40,7 @@ window.addEventListener('scroll', function(event) {
     keepHeader = false;
 });
 
+/* ======= Work and Experience Modal Changer ======= */
+
+// Keep one of the options clicked first by default
+document.getElementById('uo').click();

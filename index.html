@@ -2,9 +2,10 @@
 <html>
     <head>
         <link href="style.css" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&family=Roboto&display=swap" rel="stylesheet">    </head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.css" integrity="sha512-4wfcoXlib1Aq0mUtsLLM74SZtmB73VHTafZAvxIp/Wk9u1PpIsrfmTvK0+yKetghCL8SHlZbMyEcV8Z21v42UQ==" crossorigin="anonymous" referrerpolicy="no-referrer">        
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&family=Roboto&display=swap" rel="stylesheet">
+    </head>
     <body>
         <header>
             <a href="#">
@@ -27,14 +28,20 @@
         </header>
         <main>
             <section class="front-page">
+                <p class="front-page-introduction">Hello, my name is</p>
                 <h1><strong class="name">Michael O'Connell</strong> I'm a <strong class="position">Frontend Developer</strong> who is passionate about building interesting and creative web applications.</h1>
+                <div class="img-square-container">
+                    <div id="img-container-michael">
+                        <img id="michael-oconnell" src="images/picture.jpg">
+                    </div>
+                </div>
                 <p class="front-page-introduction">Welcome to my portfolio.</p>
             </section>
             <aside class="sticky-social">
                 <ul>
-                    <li>Github</li>
-                    <li>LinkedIn</li>
-                    <li>Email</li>
+                    <li><a href="https://github.com/michaeloconnelliii"><i class="fa fa-github fa-3x"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/michaeloconnelliii/"><i class="fa fa-linkedin fa-3x"></i></a></li>
+                    <li><a href="mailto:michaeloconnelliii@gmail.com"><i class="fa fa-envelope fa-3x"></i></a></li>
                 </ul>
             </aside>
             <section id="about" class="about">
@@ -42,30 +49,72 @@
                 <p>I'm a recent Computer and Information Science graduate from University of Oregon. I became interested in Web Development my senior year in college and I've been learning and experimenting with web technologies ever since. </p>
                 <p>After graduating, I interned at <a href="https://www.paloalto.com/">Palo Alto Software</a> where I worked with a variety of Web technologies and I learned a ton about web development.</p>
                 <div class="technology-list">
-                    <h3> Here are some of the technologies I have experience with</h3>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>Javascript</li>
-                        <li>React</li>
-                        <li>Sass</li>
-                        <li>Bootstrap</li>
-                        <li>JQuery</li>
-                        <li>PHP</li>
-                        <li>Git</li>
+                    <h3> Technologies I have experience with:</h3>
+                    <ul class="technology-experience fa-ul">
+                        <li><i class="fa-li fab fa-html5"></i>HTML</li>
+                        <li><i class="fa-li fab fa-css3-alt"></i>CSS</li>
+                        <li><i class="fa-li fab fa-js"></i>Javascript</li>
+                        <li><i class="fa-li fab fa-react"></i>React</li>
+                        <li><i class="fa-li fab fa-sass"></i>Sass</li>
+                        <li><i class="fa-li fab fa-bootstrap"></i>Bootstrap</li>
+                        <li><i class="fa-li fab fa-js"></i>JQuery</li>
+                        <li><i class="fa-li fab fa-php"></i>PHP</li>
+                        <li><i class="fa-li fab fa-git-alt"></i>Git</li>
                     </ul>
                 </div>
             </section>
             <section id="experience" class="experience">
                 <h2>Education and Experience</h2>
                 <div class="experience-modal-container">
-                    <ul class="experience-modal-anchors">
-                        <li>University of Oregon</li>
-                        <li>Univsersity of Oregon School of Law</li>
-                        <li>Palo Alto Software</li>
+                    <ul class="experience-modal-buttons fa-ul">
+                        <!-- Keep UO opened by default -->
+                        <li><i class="fa-li fas fa-book uo-list"></i><button id="uo" class="uo-button" autofocus>University of Oregon</button></li>
+                        <li><i class="fa-li far fa-keyboard uo-list"></i><button id="uo-law" class="uo-button">Univsersity of Oregon School of Law</button></li>
+                        <li><i class="fa-li fas fa-code pas-list"></i><button id="pas" class="pas-button">Palo Alto Software</button></li>
                     </ul>
                     <div class="experience-modal uo-modal">
-                        <p>Description</p>
+                        <h3>University of Oregon</h3>
+                        <hr class="job-title-sep uo-sep">
+                        <h4 class="job-title">Bachelor of Science in Computer and Information Science</h3>
+                        <ul class="job-activities uo-job-activities">
+                            <li>Attended from 6/18 to 3/21</li>
+                            <li>GPA: 3.5</li>
+                            <li>Notable courses
+                                <ul>
+                                    <li>Software Methodologies (Software Engineering)</li>
+                                    <li>Secure Software Engineering</li>
+                                    <li>Computer and Network Security</li>
+                                    <li>Principles of Programming Languages</li>
+                                    <li>Operating Systems</li>
+                                    <li>Advanced Data Structures</li>
+                                    <li>Intermediate Algorithms</li>
+                                    <li>C/C++ & Unix</li>
+                                    <li>Computer Organization (Computer Architecture)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <hr class="job-title-sep uo-sep">
+                        <h4 class="job-title">Learning Assistant for Introduction to Programming</h3>
+                        <ul class="job-activities uo-job-activities">
+                            <li>Worked from 1/20 to 3/20</li>
+                            <li>Provided Python programming assistance by listening to student’s needs, isolating critical skills and concepts, and developing suitable teaching strategies.</li>
+                        </ul>
+                    </div>
+                    <div class="experience-modal uo-modal">
+                        <h3>Univsersity of Oregon School of Law</h3>
+                        <hr class="job-title-sep uo-sep">
+                        <ul class="job-activities uo-job-activities">
+                            <li>Worked from 08/17 to 07/18</li>
+                            <li>Carried out instructions or requests assigned by IT manager or System Administrator such as helping diagnose or troubleshoot software and hardware-related issues raised by faculty and student</li>
+                        </ul>
+                    </div>
+                    <div class="experience-modal pas-modal">
+                        <h3>Palo Alto Software</h3>
+                        <hr class="job-title-sep pas-sep">
+                        <ul class="job-activities pas-job-activities">
+                            <li>Worked from 08/21 to X</li>
+                            <li>Carried out instructions or requests assigned by IT manager or System Administrator such as helping diagnose or troubleshoot software and hardware-related issues raised by faculty and student</li>
+                        </ul>
                     </div>
                 </div>
             </section>

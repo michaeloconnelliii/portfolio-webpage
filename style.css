@@ -1,6 +1,16 @@
 /* ========= TODO ============ 
 * Determine blur or some other effect on header open/close
+* Instead of profile picture, add an interesting landscape photo that can look good at a wide length
 */
+
+/* ========= Font Awesome ========= */
+.fa {
+    font-weight: 900;
+}
+
+.fa-li {
+    color: var(--primary-green);
+}
 
 /* ========= Global Styles ========= */
 :root {
@@ -10,9 +20,13 @@
     --header-white: #F1F1EF;
     --body-white: #eff0ea;
     --intro-white: rgba(241, 241, 239, 0.8);
-    --name-size: 2.75rem;
+    --uo-primary: #007030;
+    --uo-secondary: #FEE11A;
+    --pas-primary: #43c4db;
+    --pas-secondary: #4ac18d;
+    --name-size: 2.285rem;
     --h1-size: 1.25rem;
-
+    --body-size: 1.1rem;
 }
 
 * {
@@ -32,7 +46,9 @@ header {
     padding: 1em;
     font-family: 'Nunito', sans-serif;
     /* background color with alpha */
-    background: rgba(34, 38, 41, .95); 
+    background: rgba(34, 38, 41, .95);
+    /* Font Awesome has default of 4, this is to prevent icons bleeding into header */
+    z-index: 5; 
 }
 
 .header-toggle-off {
@@ -49,7 +65,7 @@ header {
 nav {
     position: fixed;
     background: #16181a;
-    left: 40%;
+    left: 65%;
     right: 0;
     top: 0;
     bottom: 0;
@@ -122,19 +138,20 @@ nav ul {
     list-style: none;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+    margin-top: 6em;
+    align-items: flex-start;
     height: 100%;
 }
 
 nav ul li {
-    margin: 0.5em;
+    margin-bottom: 1.5em;
 }
 
 nav ul a {
     text-decoration: none;
     color:var(--header-white);
     font-size: 1.5rem;
+    font-weight: 700;
 }
 
 /* ========= Logo ========= */
@@ -179,23 +196,40 @@ body {
     color: var(--body-white);
 }
 
-main {
-    margin-top: 6em;
+section {
+     min-height: 75vh;
+}
+
+a {
+    color: var(--body-white);
+    text-decoration-color: var(--primary-green);
 }
 
 a:hover,
 a:focus {
-    color:var(--secondary-green);
+    color:var(--primary-green);
     outline: none;
 }
 
-section {
+section, aside {
     max-width: 650px;
     width: 90%;
     margin: 0 auto;
 }
 
 /* ========= Front Page ========= */
+
+.front-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-height: 100vh;
+}
+
+.front-page-introduction {
+    margin-bottom: 0;
+}
 
 .name {
     display: block;
@@ -205,31 +239,182 @@ section {
 }
 
 .position {
-    text-decoration: underline;
-    text-decoration-color: var(--secondary-green);
+    color: var(--primary-green);
     font-weight: bolder;
+}
+
+.img-square-container {
+    align-self: center;
+    border: 1px solid black;
+    width: 100%;
+    background: var(--secondary-green);
+    display: flex;
+    justify-content: center;
+}
+
+#img-container-michael {
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    min-width: 200px;
+    min-height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 5px solid black;
+}
+  
+#img-container-michael img {
+    width: auto;
+    height: 100%;
+}
+
+.sticky-social ul {
+    list-style: none;
+    padding: 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* ========= Sticky Social Aside ========= */
+.sticky-social {
+    display: none;
+}
+
+/* ========= About Me ========= */
+.technology-experience {
+    list-style-type: none;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+
+/* ========= Education and Experience ========= */
+.experience-modal-buttons {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.experience-modal-buttons li button{
+    padding: none;
+    margin-bottom: 0.75em;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: var(--body-white);
+    font-size: var(--body-size);
+}
+
+.experience-modal-buttons li button:hover,
+.experience-modal-buttons li button:focus {
+    outline: none;
+}
+
+.uo-button:hover,
+.uo-button:focus {
+    border: 2px solid var(--uo-primary);
+    color: var(--uo-secondary);
+}
+
+.uo-list {
+    color: var(--uo-primary);
+}
+
+.pas-list {
+    color: var(--pas-primary);
+}
+
+.pas-button:hover,
+.pas-button:focus {
+    border: 2px solid var(--pas-primary);
+    color: var(--pas-secondary);
+}
+
+.course-list {
+    padding: 0;
+}
+
+.experience-modal {
+    padding: 1em;
+}
+
+.uo-modal {
+    border: 4px solid var(--uo-primary);
+}
+
+.pas-modal {
+    border: 4px solid var(--pas-primary);
+}
+
+hr.job-title-sep {
+    border-radius: 2px;
+}
+
+hr.uo-sep {
+    border: 1.5px solid var(--uo-secondary);
+}
+
+hr.pas-sep {
+    border: 1.5px solid var(--pas-secondary);
+}
+
+.uo-color-secondary {
+    border: 1.5px solid var(--primary-green);
+}
+
+.job-activities, 
+.job-activities ul {
+    list-style: none;
+}
+
+.job-activities li::before,
+.job-activities ul li::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    /* color: var(--primary-green); */
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.uo-job-activities li::before,
+.uo-job-activities ul li::before {
+    color: var(--uo-secondary);
+}
+
+.pas-job-activities li::before,
+.pas-job-activities ul li::before {
+    color: var(--pas-secondary);
+}
+
+.job-activities li {
+    margin: 0.25em;
 }
 
 /* ========= Typography ========= */
 
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.15rem;
+    font-size: var(--body-size);
+    letter-spacing: 0.3px;
 }
 
-h1, h2, h3 {
+h1, h2, h3, .front-page-introduction {
     font-family: 'Nunito', sans-serif;
     font-weight: 700;
     color: var(--header-white);
 }
 
-h1 {
+h1, .front-page-introduction {
     font-size: var(--h1-size);
     color: var(--intro-white);
 }
 
 .front-page-introduction {
-    font-size: 1.5rem;
+    font-size: var(--h1-size);
     font-weight: 700;
 }
 
@@ -239,4 +424,12 @@ h2 {
 
 h3 {
     font-size: 1.25rem;
+}
+
+/* ========= Media Queries ========= */
+@media (max-height: 644px) {
+    .front-page {
+        padding-top: 3em;
+        justify-content: flex-start;
+    }
 }
