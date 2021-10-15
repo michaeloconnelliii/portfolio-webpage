@@ -1,4 +1,5 @@
 // TODO decouple header staying upon clicking a nav link with the two event listeners
+// TODO Keep button pressed style border and text color after pressing
 
 /* ======= Header and Navigation ======= */
 /* Toggle the Navigation Bar on clicking outside nav when it's open. 
@@ -46,26 +47,20 @@ const uoLawButton = document.getElementById('uo-law');
 const pasButton = document.getElementById('pas');
 
 // change which modal is visible from clicking each of the buttons
-let idToButton = {
-    'uo': uoButton,
-    'uo-law': uoLawButton,
-    'pas': pasButton
+let idButtonModal = {
+    'uo': [uoButton, 'uo-modal'],
+    'uo-law': [uoLawButton, 'uo-law-modal'],
+    'pas': [pasButton, 'pas-modal']
 };
 
-let idToModal = {
-    'uo': 'uo-modal',
-    'uo-law': 'uo-law-modal',
-    'pas': 'pas-modal'
-};
-
-for(let id in idToButton) {
-    idToButton[id].addEventListener('click', (event) => {
-        let modal = document.getElementsByClassName(idToModal[id])[0];
+for(let id in idButtonModal) {
+    idButtonModal[id][0].addEventListener('click', (event) => {
+        let modal = document.getElementsByClassName(idButtonModal[id][1])[0];
         modal.style.display = 'block';
 
-        for(let otherModalId in idToModal) {
+        for(let otherModalId in idButtonModal) {
             if(otherModalId !== id) {
-                let otherModal = document.getElementsByClassName(idToModal[otherModalId])[0];
+                let otherModal = document.getElementsByClassName(idButtonModal[otherModalId][1])[0];
                 otherModal.style.display = 'none';
             }
         }
