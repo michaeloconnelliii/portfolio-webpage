@@ -46,7 +46,8 @@ const uoButton = document.getElementById('uo');
 const uoLawButton = document.getElementById('uo-law');
 const pasButton = document.getElementById('pas');
 
-// change which modal is visible from clicking each of the buttons
+/* Change which modal is visible from clicking each of the buttons
+   Button will stay selected indicating which button corresponds to which modal */
 let idButtonModal = {
     'uo': [uoButton, 'uo-modal'],
     'uo-law': [uoLawButton, 'uo-law-modal'],
@@ -55,13 +56,24 @@ let idButtonModal = {
 
 for(let id in idButtonModal) {
     idButtonModal[id][0].addEventListener('click', (event) => {
+        // select clicked button
+        event.target.classList.add('selected');
+        event.target.classList.remove('unselected');
+
+        // show corresponding modal
         let modal = document.getElementsByClassName(idButtonModal[id][1])[0];
         modal.style.display = 'block';
 
         for(let otherModalId in idButtonModal) {
             if(otherModalId !== id) {
+                // remove active/visible modal
                 let otherModal = document.getElementsByClassName(idButtonModal[otherModalId][1])[0];
                 otherModal.style.display = 'none';
+
+                // unselect previously active button
+                let activeButton = idButtonModal[otherModalId][0];
+                activeButton.classList.remove('selected');
+                activeButton.classList.add('unselected');
             }
         }
     });

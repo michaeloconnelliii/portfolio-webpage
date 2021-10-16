@@ -20,10 +20,6 @@
     --header-white: #F1F1EF;
     --body-white: #eff0ea;
     --intro-white: rgba(241, 241, 239, 0.8);
-    --uo-primary: #007030;
-    --uo-secondary: #FEE11A;
-    --pas-primary: #43c4db;
-    --pas-secondary: #4ac18d;
     --name-size: 2.285rem;
     --h1-size: 1.25rem;
     --body-size: 1.1rem;
@@ -291,6 +287,7 @@ section, aside {
 }
 
 /* ========= Education and Experience ========= */
+
 .experience-modal-buttons {
     list-style: none;
     display: flex;
@@ -302,35 +299,25 @@ section, aside {
     padding: none;
     margin-bottom: 0.75em;
     cursor: pointer;
-    border: none;
     background: none;
-    color: var(--body-white);
     font-size: var(--body-size);
 }
 
 .experience-modal-buttons li button:hover,
 .experience-modal-buttons li button:focus {
     outline: none;
+    border: 2px solid var(--primary-green);
+    color: var(--body-white);
 }
 
-.uo-button:hover,
-.uo-button:focus {
-    border: 2px solid var(--uo-primary);
-    color: var(--uo-secondary);
+.unselected {
+    border: none;
+    color: var(--body-white);
 }
 
-.uo-list {
-    color: var(--uo-primary);
-}
-
-.pas-list {
-    color: var(--pas-primary);
-}
-
-.pas-button:hover,
-.pas-button:focus {
-    border: 2px solid var(--pas-primary);
-    color: var(--pas-secondary);
+.selected {
+    border: 2px solid var(--primary-green);
+    color: var(--body-white);
 }
 
 .course-list {
@@ -341,31 +328,16 @@ section, aside {
     padding: 1em;
 }
 
-.uo-modal, .uo-law-modal {
-    border: 4px solid var(--uo-primary);
+.uo-modal, .uo-law-modal, .pas-modal {
+    border: 4px solid var(--primary-green);
 }
 
 .uo-law-modal, .pas-modal {
     display: none;
 }
 
-.pas-modal {
-    border: 4px solid var(--pas-primary);
-}
-
 hr.job-title-sep {
     border-radius: 2px;
-}
-
-hr.uo-sep {
-    border: 1.5px solid var(--uo-secondary);
-}
-
-hr.pas-sep {
-    border: 1.5px solid var(--pas-secondary);
-}
-
-.uo-color-secondary {
     border: 1.5px solid var(--primary-green);
 }
 
@@ -381,20 +353,78 @@ hr.pas-sep {
     display: inline-block;
     width: 1em;
     margin-left: -1em;
-}
-
-.uo-job-activities li::before,
-.uo-job-activities ul li::before {
-    color: var(--uo-secondary);
-}
-
-.pas-job-activities li::before,
-.pas-job-activities ul li::before {
-    color: var(--pas-secondary);
+    color: var(--primary-green);
 }
 
 .job-activities li {
     margin: 0.25em;
+}
+
+/* ========= Projects ========= */
+.split {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-screenshot {
+    background: url('images/test-image.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 40vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.project-title {
+    text-align: center;
+}
+
+.project-links {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 0.5em;
+    list-style-type: none;
+}
+
+.project-links li {
+    margin-right: 2em;
+}
+
+/* ========= Contact ========= */
+.contact {
+    min-height: 40vh;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--h1-size);
+}
+
+.contact p {
+    text-align: center;
+}
+
+.contact-button {
+    width: 40%;
+    max-width: 300px;
+    font-size: var(--h1-size);
+    cursor: pointer;
+    background: none;
+    padding: none;
+    color: var(--body-white);
+    border: 2px solid var(--primary-green);
+}
+
+.contact-button:hover,
+.contact-button:focus {
+    background: rgba(134, 194, 50, 0.1);
+    outline: none;
 }
 
 /* ========= Typography ========= */
