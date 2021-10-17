@@ -595,7 +595,7 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin-top: 0;
+        margin-top: 0.3em;
         height: 0;
     }
     
@@ -606,41 +606,4 @@ footer {
     .hamburger {
         display: none;
     }
-    
-    nav ul li {
-         /* margin-right: 1.5em; */
-    }
-    
-    nav ul a {
-        text-decoration: none;
-        color:var(--header-white);
-        font-size: var(--nav-size);
-        font-weight: 700;
-    }
-
-    /* .sticky-social {
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        display: block;
-        padding: none;
-    }
-
-    .sticky-social ul {
-        list-style: none;
-        padding: 0;
-    
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-end;
-    }
-
-    .sticky-social ul li {
-        padding: 0;
-        margin: 1em;
-    } */
-
-
-
 }
