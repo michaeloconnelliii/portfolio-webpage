@@ -1,6 +1,5 @@
 /* ========= TODO ============ 
 * Instead of profile picture, add an interesting landscape photo that can look good at a wide length
-* Media Queries for mid-sizes ~350 or so and beyond
 */
 
 /* ========= Font Awesome ========= */
@@ -20,9 +19,6 @@
     --header-white: #F1F1EF;
     --body-white: #eff0ea;
     --intro-white: rgba(241, 241, 239, 0.8);
-    /* --name-size: 2.285rem;
-    --h1-size: 1.25rem;
-    --body-size: 1.1rem; */
     --name-size: 1.65rem;
     --h1-size: 1rem;
     --h2-size: 1.45rem;
@@ -215,7 +211,7 @@ a:focus {
 }
 
 section, aside {
-    max-width: 650px;
+    max-width: 475px;
     width: 90%;
     margin: 0 auto;
 }
@@ -487,12 +483,10 @@ h1, .front-page-introduction {
 }
 
 h2 {
-    /* font-size: 2.25rem; */
     font-size: var(--h2-size);
 }
 
 h3 {
-    /* font-size: 1.25rem; */
     font-size: var(--h3-size);
 }
 
@@ -501,9 +495,52 @@ footer {
 }
 
 /* ========= Media Queries ========= */
-@media (max-height: 644px) {
+@media (max-height: 635px) {
     .front-page {
         padding-top: 3em;
         justify-content: flex-start;
+    }
+}
+
+ @media (min-width: 375px) {
+    nav {
+        left: 50%;
+    }
+
+    @media(min-height: 715px) {
+        :root {
+            --name-size: 2.285rem;
+            --body-size: 1.1rem;
+            --name-size: 1.65rem;
+            --h1-size: 1.25rem;
+            --h2-size: 2.25rem;
+            --h3-size: 1.25rem;
+            --footer-size: 1rem;
+        }
+    }
+ }
+
+ @media (min-width: 475px) {
+    nav {
+        left: 60%;
+    }
+ }
+
+ @media (min-width: 575px) {
+    nav {
+        left: 70%;
+    }
+ }
+
+
+@media (min-width: 700px) {
+    :root {
+        --name-size: 2.285rem;
+        --body-size: 1.1rem;
+        --name-size: 1.65rem;
+        --h1-size: 1.25rem;
+        --h2-size: 2.25rem;
+        --h3-size: 1.25rem;
+        --footer-size: 1rem;
     }
 }
