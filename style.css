@@ -1,6 +1,7 @@
 /* ========= TODO ============ 
 * Determine blur or some other effect on header open/close
 * Instead of profile picture, add an interesting landscape photo that can look good at a wide length
+* Media Queries for mid-sizes ~350 or so and beyond
 */
 
 /* ========= Font Awesome ========= */
@@ -20,9 +21,14 @@
     --header-white: #F1F1EF;
     --body-white: #eff0ea;
     --intro-white: rgba(241, 241, 239, 0.8);
-    --name-size: 2.285rem;
+    /* --name-size: 2.285rem;
     --h1-size: 1.25rem;
-    --body-size: 1.1rem;
+    --body-size: 1.1rem; */
+    --name-size: 1.65rem;
+    --h1-size: 1rem;
+    --h2-size: 1.45rem;
+    --h3-size: 1.15rem;
+    --body-size: 0.9rem;
 }
 
 * {
@@ -61,7 +67,7 @@ header {
 nav {
     position: fixed;
     background: #16181a;
-    left: 65%;
+    left: 40%;
     right: 0;
     top: 0;
     bottom: 0;
@@ -396,7 +402,7 @@ hr.job-title-sep {
 
 /* ========= Contact ========= */
 .contact {
-    min-height: 40vh;
+    min-height: 35vh;
 }
 
 .contact-container {
@@ -426,13 +432,40 @@ hr.job-title-sep {
     background: rgba(134, 194, 50, 0.1);
     outline: none;
 }
+/* ========= Footer ========= */
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.footer-social {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 1em;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-social li {
+    margin: 1em;
+}
+
+.footer-container p {
+    margin: 0;
+}
+
 
 /* ========= Typography ========= */
 
 body {
     font-family: 'Roboto', sans-serif;
     font-size: var(--body-size);
-    letter-spacing: 0.3px;
+    letter-spacing: 0.4px;
 }
 
 h1, h2, h3, .front-page-introduction {
@@ -452,11 +485,13 @@ h1, .front-page-introduction {
 }
 
 h2 {
-    font-size: 2.25rem;
+    /* font-size: 2.25rem; */
+    font-size: var(--h2-size);
 }
 
 h3 {
-    font-size: 1.25rem;
+    /* font-size: 1.25rem; */
+    font-size: var(--h3-size);
 }
 
 /* ========= Media Queries ========= */

@@ -1,6 +1,3 @@
-// TODO decouple header staying upon clicking a nav link with the two event listeners
-// TODO Keep button pressed style border and text color after pressing
-
 /* ======= Header and Navigation ======= */
 /* Toggle the Navigation Bar on clicking outside nav when it's open. 
    
@@ -40,6 +37,29 @@ window.addEventListener('scroll', function(event) {
     oldScrollVal = newScrollVal;
     keepHeader = false;
 });
+
+/* Offset intradocument links such that the header doesn't cover up the section title
+ * Source: https://stackoverflow.com/questions/17534661/make-anchor-link-go-some-pixels-above-where-its-linked-to */
+
+ // The function actually applying the offset
+function offsetAnchor() {
+    if (location.hash.length !== 0) {
+      window.scrollTo(window.scrollX, window.scrollY - 80);
+    }
+  }
+  
+// Captures click events of all <a> elements with href starting with #
+window.addEventListener('hashchange', function(event) {
+// Click events are captured before hashchanges. Timeout
+// causes offsetAnchor to be called after the page jump.
+    window.setTimeout(function() {
+      offsetAnchor();
+    }, 0);
+  });
+  
+// Set the offset when entering page with hash present in the url
+window.setTimeout(offsetAnchor, 0);
+
 
 /* ======= Work and Experience Modal Changer ======= */
 const uoButton = document.getElementById('uo');
