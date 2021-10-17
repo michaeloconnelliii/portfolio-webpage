@@ -1,5 +1,4 @@
 /* ========= TODO ============ 
-* Determine blur or some other effect on header open/close
 * Instead of profile picture, add an interesting landscape photo that can look good at a wide length
 * Media Queries for mid-sizes ~350 or so and beyond
 */
@@ -29,6 +28,7 @@
     --h2-size: 1.45rem;
     --h3-size: 1.15rem;
     --body-size: 0.9rem;
+    --footer-size: 0.8rem;
 }
 
 * {
@@ -44,6 +44,7 @@ header {
     justify-content: space-between;
     overflow: visible;
     width: 100%;
+    min-width: 200px;
     height: 70px;
     padding: 1em;
     font-family: 'Nunito', sans-serif;
@@ -199,7 +200,7 @@ body {
 }
 
 section {
-     min-height: 75vh;
+     min-height: 65vh;
 }
 
 a {
@@ -432,6 +433,7 @@ hr.job-title-sep {
     background: rgba(134, 194, 50, 0.1);
     outline: none;
 }
+
 /* ========= Footer ========= */
 .footer-container {
     display: flex;
@@ -492,6 +494,10 @@ h2 {
 h3 {
     /* font-size: 1.25rem; */
     font-size: var(--h3-size);
+}
+
+footer {
+    font-size: var(--footer-size);
 }
 
 /* ========= Media Queries ========= */
