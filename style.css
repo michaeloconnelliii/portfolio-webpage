@@ -154,6 +154,10 @@ nav ul a {
     font-weight: 700;
 }
 
+.section-selected {
+    color:var(--primary-green);
+}
+
 /* ========= Logo ========= */
 
 .logo-initials {
@@ -197,7 +201,7 @@ body {
 }
 
 section {
-     min-height: 65vh;
+     min-height: 85vh;
 }
 
 a {
@@ -449,7 +453,6 @@ hr.job-title-sep {
 .footer-container p {
     margin: 0;
 }
-
 
 /* ========= Typography ========= */
 
