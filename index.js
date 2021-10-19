@@ -38,32 +38,6 @@ window.addEventListener('scroll', function(event) {
     keepHeader = false;
 });
 
-/* Offset intradocument links such that the header doesn't cover up the section title
- * Source: https://stackoverflow.com/questions/17534661/make-anchor-link-go-some-pixels-above-where-its-linked-to */
-
- // The function actually applying the offset
-function offsetAnchor() {
-    if (location.hash.length !== 0) {
-      window.scrollTo(window.scrollX, window.scrollY - 80);
-    }
-  }
-  
-// Captures click events of all <a> elements with href starting with #
-window.addEventListener('hashchange', function(event) {
-// Click events are captured before hashchanges. Timeout
-// causes offsetAnchor to be called after the page jump.
-    window.setTimeout(function() {
-      offsetAnchor();
-    }, 0);
-  });
-  
-// Set the offset when entering page with hash present in the url
-window.setTimeout(offsetAnchor, 0);
-
-/* Select Header link while user is in the corresponding section. 
-   For example, if user scrolls to the 'About' section, the 'About' header
-   link should be selected (it should be --primary-green). */
-
 // 1. Create an object that maps nav links to their corresponding section ID
 const navLinks = document.getElementsByClassName('nav-link');
 let sectionToObjects = {};

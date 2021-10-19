@@ -75,6 +75,12 @@ nav {
     transition: transform 250ms ease-in-out;
 }
 
+/* Offset where intradocument links lead to such that the header doesn't cover up the section title/heading
+ * Source: https://stackoverflow.com/questions/17534661/make-anchor-link-go-some-pixels-above-where-its-linked-to */
+section {
+    scroll-margin-top: 80px;
+}
+
 .nav-toggle {
     padding: 0.5em;
     background: transparent;
