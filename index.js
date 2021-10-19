@@ -13,6 +13,25 @@ window.addEventListener('click', (event) => {
     keepHeader = event.target.classList.contains('nav-link');
 });
 
+/* Stop playing nav transition momentarily on viewport resize. 
+   Source: https://stackoverflow.com/questions/63861504/pure-css-hamburger-menu-shows-up-when-resizing-viewport-before-disappearing */
+(function () {
+    const classes = document.body.classList;
+    let timer = null;
+    window.addEventListener('resize', function () {
+      if (timer){
+        clearTimeout(timer);
+        timer = null;
+      } else {
+        classes.add('stop-transition');
+      }
+      timer = setTimeout(() => {
+        classes.remove('stop-transition');
+        timer = null;
+      }, 100);
+    });
+  })();
+
 /* Keep the header until user gets past name (Michael O'Connell) and 
    then hide the header on scroll down, insert it on scroll up.
 

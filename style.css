@@ -75,6 +75,12 @@ nav {
     transition: transform 250ms ease-in-out;
 }
 
+/* Stop playing transition momentarily on viewport resize. 
+   Source: https://stackoverflow.com/questions/63861504/pure-css-hamburger-menu-shows-up-when-resizing-viewport-before-disappearing */
+body.stop-transition nav {
+    transition: none;
+}
+
 /* Offset where intradocument links lead to such that the header doesn't cover up the section title/heading
  * Source: https://stackoverflow.com/questions/17534661/make-anchor-link-go-some-pixels-above-where-its-linked-to */
 section {
