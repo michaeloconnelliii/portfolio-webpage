@@ -634,6 +634,15 @@ footer {
 
 @media (min-width: 900px) {
     /* ========= Projects ========= */
+    .projects {
+        max-width: 1300px;
+    }
+
+    .projects h2 {
+        margin: 0 auto;
+        max-width: 900px;
+    }
+
     .split {
         display: flex;
         flex-direction: row;
