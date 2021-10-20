@@ -19,13 +19,14 @@
     --header-white: #F1F1EF;
     --body-white: #eff0ea;
     --intro-white: rgba(241, 241, 239, 0.8);
-    --name-size: 1.1rem;
+    --name-size: 1.2rem;
     --h1-size: 1rem;
     --h2-size: 1.2rem;
     --h3-size: 1rem;
     --body-size: 0.7rem;
     --nav-size: 1rem;
     --footer-size: 0.55rem;
+    --contact-size: 1.1rem
 }
 
 * {
@@ -212,10 +213,6 @@ body {
     color: var(--body-white);
 }
 
-section {
-     min-height: 85vh;
-}
-
 a {
     color: var(--body-white);
     text-decoration-color: var(--primary-green);
@@ -227,10 +224,11 @@ a:focus {
     outline: none;
 }
 
-section, aside {
+section {
     max-width: 475px;
     width: 90%;
     margin: 0 auto;
+    min-height: 85vh;
 }
 
 /* ========= Front Page ========= */
@@ -282,11 +280,6 @@ section, aside {
 #img-container-michael img {
     width: auto;
     height: 100%;
-}
-
-/* ========= Sticky Social Aside ========= */
-.sticky-social {
-    display: none;
 }
 
 /* ========= About Me ========= */
@@ -415,7 +408,7 @@ hr.job-title-sep {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: var(--h1-size);
+    font-size: var(--contact-size);
 }
 
 .contact p {
@@ -528,6 +521,7 @@ footer {
         --body-size: 0.9rem;
         --nav-size: 1.3rem;
         --footer-size: 0.8rem;
+        --contact-size: 0.9rem
     }
 }
 
@@ -544,12 +538,12 @@ footer {
         :root {
             --name-size: 2.285rem;
             --body-size: 1.1rem;
-            --name-size: 1.65rem;
             --h1-size: 1.25rem;
             --h2-size: 2.25rem;
             --h3-size: 1.25rem;
             --nav-size: 1.5rem;
             --footer-size: 1rem;
+            --contact-size: 1.4rem
         }
     }
  }
@@ -569,14 +563,14 @@ footer {
 /* desktop layout */
 @media (min-width: 700px) {
     :root {
-        --name-size: 2.285rem;
-        --body-size: 1.1rem;
-        --name-size: 1.65rem;
-        --h1-size: 1.25rem;
-        --h2-size: 2.25rem;
-        --h3-size: 1.25rem;
-        --nav-size: 1rem;
-        --footer-size: 1rem;
+        --name-size: 3.25rem;
+        --body-size: 1.35rem;
+        --h1-size: 1.7rem;
+        --h2-size: 2.7rem;
+        --h3-size: 1.6rem;
+        --nav-size: 1.1rem;
+        --footer-size: 1.3rem;
+        --contact-size: 1.4rem
     }
 
     /* ========= Header ========= */
@@ -602,7 +596,7 @@ footer {
         position: static;
         transform: translateX(0);
         background: none;
-        width: 65%;
+        width: 70%;
         max-width: 500px;
     }
 
@@ -620,5 +614,62 @@ footer {
     
     .hamburger {
         display: none;
+    }
+
+    /* ========= Main Content ========= */
+
+    section {
+        max-width: 900px;
+    }
+
+    /* ========= Front Page ========= */
+
+    /* ========= About Me ========= */
+    .technology-experience {
+        columns: 3;
+        -webkit-columns: 3;
+        -moz-columns: 3;
+    }
+}
+
+@media (min-width: 900px) {
+    /* ========= Projects ========= */
+    .split {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .project-container {
+        margin-right: 2em;
+    }
+}
+
+@media (min-width: 1000px) {
+    /* ========= Experience ========= */
+    .experience {
+        max-width: 1300px;
+    }
+
+    .experience h2 {
+        margin: 0 auto;
+        max-width: 900px;
+    }
+
+    .experience-modal-container {
+        margin-top: 2em;
+        display: flex;
+        justify-content: center;
+    }
+
+    .experience-modal-buttons {
+        margin-right: 1em;
+        margin-top: 0;
+        align-self: flex-start;
+        width: 375px;
+        min-width: 150px;
+    }
+
+    .experience-modal {
+        max-width: 700px;
     }
 }
