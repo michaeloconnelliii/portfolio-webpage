@@ -76,22 +76,20 @@ for(let link of navLinks) {
 // beginningSectionY is used s.t. we don't have the about section selected before we actually get to it scrolling
 const beginningSection = sectionToObjects['about'][0];
 const endingLink = sectionToObjects['contact'][1];
+let linkSelected = false;
 
-window.addEventListener('scroll', function(event) {
-    
+window.addEventListener('scroll', onScroll);
+
+function onScroll() {
     // beginning of the about section
     const beginningSectionY = beginningSection.getBoundingClientRect().top;
-
     
     // go a little beyond the bottom of the viewport so you see the entire section header
     let offset = 50;
-    
+
     // document y position relative to the top of the viewport + the viewport size which gives the document y position 
     // relative to the bottom of the viewport
-    let bottomScrollValue = this.window.scrollY + this.window.innerHeight;
-    
-    // used so that as soon as we find we're between a section element, we don't keep looking for which link to select
-    let linkSelected = false;
+    let bottomScrollValue = this.window.pageYOffset + this.window.innerHeight;
 
     // don't select anything yet if we haven't reached the about section
     if(bottomScrollValue > beginningSectionY + document.documentElement.scrollTop + offset) {
@@ -105,16 +103,19 @@ window.addEventListener('scroll', function(event) {
                 !linkSelected) {
                 link.classList.add('section-selected');
                 linkSelected = true;
+                sectionIdSelected = sectionId;
             }
             else {
                 link.classList.remove('section-selected');
             }
         }
-
         // reached the end of the contact section and we go beyond the section's bottom, keep contact selected
         if(!linkSelected) {
             endingLink.classList.add('section-selected');
         }
+
+        linkSelected = false;
+
     }
     else {
         for(const sectionId in sectionToObjects) {
@@ -122,10 +123,11 @@ window.addEventListener('scroll', function(event) {
             link.classList.remove('section-selected');
         }
     }
-});
+}
 
 /* ======= Work and Experience Modal Changer ======= */
 const uoButton = document.getElementById('uo');
+const uoCisButton = document.getElementById('uo-cis');
 const uoLawButton = document.getElementById('uo-law');
 const pasButton = document.getElementById('pas');
 
@@ -133,6 +135,7 @@ const pasButton = document.getElementById('pas');
    Button will stay selected indicating which button corresponds to which modal */
 let idButtonModal = {
     'uo': [uoButton, 'uo-modal'],
+    'uo-cis': [uoCisButton , 'uo-cis-modal'],
     'uo-law': [uoLawButton, 'uo-law-modal'],
     'pas': [pasButton, 'pas-modal']
 };

@@ -28,32 +28,44 @@
         </header>
         <main>
             <section class="front-page">
-                <p class="front-page-introduction">Hello, my name is</p>
-                <h1><strong class="name">Michael O'Connell</strong> I'm a <strong class="position">Frontend Developer</strong> who is passionate about building interesting and creative web applications.</h1>
-                <div class="img-square-container">
-                    <div id="img-container-michael">
-                        <img id="michael-oconnell" src="images/picture.jpg">
+                <div class="center-container front-center-container">
+                    <div class="small-section-container">
+                        <p class="front-page-introduction">Hello, my name is</p>
+                        <h1><strong class="name">Michael O'Connell</strong> I'm a <strong class="position">Frontend Developer</strong> who is passionate about building interesting and creative web applications.</h1>
+                        <div class="img-square-container">
+                            <div id="img-container-michael">
+                                <img id="michael-oconnell" src="images/picture.jpg">
+                            </div>
+                        </div>
+                        <p class="front-page-introduction">Welcome to my portfolio.</p>
                     </div>
                 </div>
-                <p class="front-page-introduction">Welcome to my portfolio.</p>
             </section>
             <section id="about" class="about">
                 <h2>About Me</h2>
-                <p>I'm a recent Computer and Information Science graduate from University of Oregon. I became interested in Web Development my senior year in college and I've been learning and experimenting with web technologies ever since. </p>
-                <p>After graduating, I interned at <a href="https://www.paloalto.com/">Palo Alto Software</a> where I worked with a variety of Web technologies and I learned a ton about web development.</p>
-                <div class="technology-list">
-                    <h3> Technologies I have experience with:</h3>
-                    <ul class="technology-experience fa-ul">
-                        <li><i class="fa-li fab fa-html5"></i>HTML</li>
-                        <li><i class="fa-li fab fa-css3-alt"></i>CSS</li>
-                        <li><i class="fa-li fab fa-js"></i>Javascript</li>
-                        <li><i class="fa-li fab fa-react"></i>React</li>
-                        <li><i class="fa-li fab fa-sass"></i>Sass</li>
-                        <li><i class="fa-li fab fa-bootstrap"></i>Bootstrap</li>
-                        <li><i class="fa-li fab fa-js"></i>JQuery</li>
-                        <li><i class="fa-li fab fa-php"></i>PHP</li>
-                        <li><i class="fa-li fab fa-git-alt"></i>Git</li>
-                    </ul>
+                <div class="center-container">
+                    <div class="img-square-container about-picture">
+                        <div class="img-container">
+                        </div>
+                    </div>
+                    <div class="small-section-container">
+                        <p>I'm a recent Computer and Information Science graduate from University of Oregon. I became interested in Web Development my senior year in college and I've been learning and experimenting with web technologies ever since. </p>
+                        <p>After graduating, I interned at <a href="https://www.paloalto.com/">Palo Alto Software</a> where I worked with a variety of Web technologies and I learned a ton about web development.</p>
+                        <div class="technology-list">
+                            <h3> Technologies I have experience with:</h3>
+                            <ul class="technology-experience fa-ul">
+                                <li><i class="fa-li fab fa-html5"></i>HTML</li>
+                                <li><i class="fa-li fab fa-css3-alt"></i>CSS</li>
+                                <li><i class="fa-li fab fa-js"></i>Javascript</li>
+                                <li><i class="fa-li fab fa-react"></i>React</li>
+                                <li><i class="fa-li fab fa-sass"></i>Sass</li>
+                                <li><i class="fa-li fab fa-bootstrap"></i>Bootstrap</li>
+                                <li><i class="fa-li fab fa-js"></i>JQuery</li>
+                                <li><i class="fa-li fab fa-php"></i>PHP</li>
+                                <li><i class="fa-li fab fa-git-alt"></i>Git</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section id="experience" class="experience">
@@ -62,6 +74,7 @@
                     <ul class="experience-modal-buttons fa-ul">
                         <!-- Keep UO opened by default -->
                         <li><i class="fa-li fas fa-book"></i><button id="uo" class="uo-button selected">University of Oregon</button></li>
+                        <li><i class="fa-li fas fas fa-chalkboard"></i><button id="uo-cis" class="uo-button unselected">University of Oregon - CIS 122</button></li>
                         <li><i class="fa-li far fa-keyboard"></i><button id="uo-law" class="uo-button unselected">Univsersity of Oregon School of Law</button></li>
                         <li><i class="fa-li fas fa-code"></i><button id="pas" class="pas-button unselected">Palo Alto Software</button></li>
                     </ul>
@@ -86,8 +99,10 @@
                                 </ul>
                             </li>
                         </ul>
+                    </div>
+                    <div class="experience-modal uo-cis-modal">
+                        <h3>University of Oregon - CIS 122: Introduction to Programming</h3>
                         <hr class="job-title-sep">
-                        <h4 class="job-title">Learning Assistant for Introduction to Programming</h3>
                         <ul class="job-activities">
                             <li>Worked from 1/20 to 3/20</li>
                             <li>Provided Python programming assistance by listening to student’s needs, isolating critical skills and concepts, and developing suitable teaching strategies.</li>
