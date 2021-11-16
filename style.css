@@ -224,7 +224,7 @@ section {
     max-width: 475px;
     width: 90%;
     margin: 0 auto;
-    min-height: 95vh;
+    min-height: 100vh;
 }
 
 /* ========= Front Page ========= */
@@ -265,16 +265,30 @@ section {
 
 .img-square-container {
     align-self: center;
-    border: 1px solid black;
     width: 90%;
-    background: var(--secondary-green);
     display: flex;
     justify-content: center;
 }
 
 /* ========= About Me ========= */
 .about-picture {
-    display: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 330px;
+    min-width: 330px;
+    margin-top: 1em;
+    margin-left: 1em;
+    align-self: flex-start;
+}
+
+.img-container {
+    width: 150px;
+    height: 150px;
+    border: 10px solid var(--secondary-green);
+    background: url('images/picture.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 
@@ -520,6 +534,11 @@ footer {
         --footer-size: 0.8rem;
         --contact-size: 0.9rem
     }
+    /* ====== About Me ====== */
+    .img-container {
+        width: 175px;
+        height: 175px;
+    }
 }
 
  @media (min-width: 375px) {
@@ -529,6 +548,16 @@ footer {
 
     nav {
         left: 50%;
+    }
+
+    /* ====== About Me ====== */
+    .about-picture {
+        justify-content: center;
+    }
+
+    .img-container {
+        width: 225px;
+        height: 225px;
     }
 
     @media(min-height: 715px) {
@@ -555,6 +584,12 @@ footer {
     nav {
         left: 70%;
     }
+
+    /* ====== About Me ====== */
+    .img-container {
+        width: 250px;
+        height: 250px;
+    }
  }
 
 /* desktop layout */
@@ -571,7 +606,6 @@ footer {
     }
 
     /* ========= Header ========= */
-
     header {
         position: fixed;
         top: 0;
@@ -614,17 +648,13 @@ footer {
     }
 
     /* ========= Main Content ========= */
-
     section {
         max-width: 1300px;
     }
 
     /* ========= Front Page ========= */
-    .center-container {
-        display: flex;
-    }
-
     .front-center-container {
+        display: flex;
         justify-content: center;
         align-items: center;
     }
@@ -634,6 +664,11 @@ footer {
     }
 
     /* ========= About Me ========= */
+    .img-container {
+        width: 300px;
+        height: 300px;
+    }
+
     .technology-experience {
         columns: 3;
         -webkit-columns: 3;
@@ -648,31 +683,9 @@ footer {
 }
 
 @media (min-width: 1000px) {    
-    .center-container {
-        flex-direction: row;
-    }
-
     /* ========= About Me ========= */
-
-    .about-picture {
+    .center-container {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        order: 2;
-        min-height: 330px;
-        min-width: 330px;
-        max-width: 25%;
-        margin-top: 1em;
-        margin-left: 1em;
-        align-self: flex-start;
-    }
-
-    .img-container {
-        width: 300px;
-        height: 300px;
-        background: url('images/picture.jpg');
-        background-size: cover;
-        background-position: center;
     }
 
     #img-container-lake {
