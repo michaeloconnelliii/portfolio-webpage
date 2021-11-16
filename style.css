@@ -408,13 +408,30 @@ hr.job-title-sep {
     color: black;
 }
 
-.brevet-screenshot ul li a:hover{
+.brevet-screenshot ul li a:hover, .instaquack-screenshot ul li a:hover {
     color: var(--secondary-green);
-    background-position: center center;
 }
 
 .blackjack-screenshot {
     background-image: url('images/blackjack.png');
+    background-size: contain;
+}
+
+.blackjack-screenshot-container {
+    background-color: darkgreen;
+}
+
+.instaquack-screenshot {
+    background-image: url('images/instaquack.png');
+    background-size: contain;
+}
+
+.instaquack-screenshot-container {
+    background-color: white;
+}
+
+.instaquack-screenshot ul li a{
+    color: black;
 }
 
 .project-title {
