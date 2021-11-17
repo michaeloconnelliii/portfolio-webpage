@@ -1,3 +1,4 @@
+// TODO - Exclude Resume from onScroll
 /* ======= Header and Navigation ======= */
 /* Toggle the Navigation Bar on clicking outside nav when it's open. 
    
