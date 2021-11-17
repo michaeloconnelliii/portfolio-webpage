@@ -1,4 +1,3 @@
-// TODO - Exclude Resume from onScroll
 /* ======= Header and Navigation ======= */
 /* Toggle the Navigation Bar on clicking outside nav when it's open. 
    
@@ -65,7 +64,8 @@ let sectionToObjects = {};
 for(let link of navLinks) {
     let sectionId = link.getAttribute('href');
 
-    if(sectionId !== '#') {
+    // Exclude Resume
+    if(sectionId !== "./Michael O'Connell Resume.pdf") {
         sectionId = sectionId.substring(1);
         sectionToObjects[sectionId] = [document.getElementById(sectionId), link];
     }
