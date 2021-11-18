@@ -642,6 +642,10 @@ footer {
         --contact-size: 1.4rem
     }
 
+    .logo-initials {
+        font-size: 1.1rem;
+    }
+
     /* ========= Header ========= */
     header {
         position: fixed;
