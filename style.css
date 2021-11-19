@@ -401,7 +401,6 @@ hr.job-title-sep {
 }
 
 .project-screenshot {
-    background: url('images/test-image.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
