@@ -251,14 +251,25 @@ section {
     font-weight: bolder;
 }
 
-.lake-img {
-    background-image: url('images/aurora-borealis.jpg');
+.aurora-img {
     background-size: cover;
     background-position: bottom;
     object-fit: contain;
     border: 5px solid var(--primary-green);
     width: 100%;
     height: 200px;
+}
+
+.nowebp .aurora-img {
+    background-image: url('images/aurora-borealis.jpg');
+}
+
+.webp .aurora-img {
+    background-image: url('images/aurora-borealis.webp');
+}
+
+.no-js .aurora-img {
+    background-image: url('images/aurora-borealis.jpg');
 }
 
 .img-square-container {
@@ -283,11 +294,21 @@ section {
     width: 150px;
     height: 150px;
     border: 10px solid var(--secondary-green);
-    background: url('images/picture.jpg');
     background-size: cover;
     background-position: center;
 }
 
+.nowebp .img-container {
+    background-image: url('images/picture.jpg');
+}
+
+.no-js .img-container {
+    background-image: url('images/picture.jpg');
+}
+
+.webp .img-container {
+    background-image: url('images/picture.webp');
+}
 
 .technology-experience {
     list-style-type: none;
@@ -393,13 +414,32 @@ hr.job-title-sep {
     align-items: flex-end;
 }
 
-.portfolio-screenshot {
+.nowebp .portfolio-screenshot {
     background-image: url('images/portfolio-screenshot.png');
 }
 
+.no-js .portfolio-screenshot {
+    background-image: url('images/portfolio-screenshot.png');
+}
+
+.webp .portfolio-screenshot {
+    background-image: url('images/portfolio-screenshot.webp');
+}
+
 .brevet-screenshot {
-    background-image: url('images/brevet_website_with_entries.png');
     background-position: top left;
+}
+
+.nowebp .brevet-screenshot {
+    background-image: url('images/brevet_website_with_entries.png');
+}
+
+.no-js .brevet-screenshot {
+    background-image: url('images/brevet_website_with_entries.png');
+}
+
+.webp .brevet-screenshot {
+    background-image: url('images/brevet_website_with_entries.webp');
 }
 
 .brevet-screenshot ul li a{
@@ -411,17 +451,47 @@ hr.job-title-sep {
 }
 
 .blackjack-screenshot {
-    background-image: url('images/blackjack.png');
     background-size: contain;
 }
 
-.blackjack-screenshot-container {
+.nowebp .blackjack-screenshot {
+    background-image: url('images/blackjack.png');
+}
+
+.no-js .blackjack-screenshot {
+    background-image: url('images/blackjack.png');
+}
+
+.webp .blackjack-screenshot {
+    background-image: url('images/blackjack.webp');
+}
+
+.nowebp .blackjack-screenshot-container {
     background-color: darkgreen;
 }
 
+.no-js .blackjack-screenshot-container {
+    background-color: darkgreen;
+}
+
+.webp .blackjack-screenshot-container {
+    background-color: #005a10;
+}
+
 .instaquack-screenshot {
-    background-image: url('images/instaquack.png');
     background-size: contain;
+}
+
+.nowebp .instaquack-screenshot {
+    background-image: url('images/instaquack.png');
+}
+
+.no-js .instaquack-screenshot {
+    background-image: url('images/instaquack.png');
+}
+
+.webp .instaquack-screenshot {
+    background-image: url('images/instaquack.webp');
 }
 
 .instaquack-screenshot-container {

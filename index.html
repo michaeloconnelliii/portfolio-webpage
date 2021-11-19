@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
     <head>
         <link href="style.css" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,6 +9,9 @@
         <title>Michael O'Connell's Portfolio</title>
         <meta name="description" content="Michael O'Connell is a recent Computer and Information Science graduate from the University of Oregon. He has web development internship experience and a breadth of knowledge in Computer Science and Web Development. He is passionate about all things related to web development.">
     </head>
+    <script>
+        document.documentElement.classList.remove("no-js");
+    </script>
     <body>
         <header>
             <a href="https://michaeloconnelliii.github.io/">
@@ -35,7 +38,7 @@
                     <div class="small-section-container">
                         <p class="front-page-introduction">Hello, my name is</p>
                         <h1><strong class="name">Michael O'Connell</strong> I'm a <strong class="position">Web Developer</strong> who is passionate about building interesting and creative web applications.</h1>
-                        <div class="lake-img"></div>
+                        <div class="aurora-img"></div>
                         <p class="front-page-introduction">Welcome to my portfolio.</p>
                     </div>
                 </div>
@@ -202,6 +205,8 @@
                 </ul>
                 <p>Desgined and built by <a href="https://github.com/michaeloconnelliii">Michael O'Connell</a></p>
             </div>
+            <!--Necessary so users can still see images if they have js turned off-->
+            <script src="modernizer-detect-webp.js"></script>
             <script src="index.js"></script>
         </footer>
     </body>
