@@ -327,7 +327,7 @@ section {
 }
 
 .experience-modal-buttons li button{
-    padding: none;
+    padding: 0.25em;
     margin-bottom: 0.75em;
     cursor: pointer;
     background: none;
@@ -538,7 +538,7 @@ hr.job-title-sep {
     font-size: var(--h1-size);
     cursor: pointer;
     background: none;
-    padding: none;
+    padding: 0.05em;
     color: var(--body-white);
     border: 2px solid var(--primary-green);
 }
