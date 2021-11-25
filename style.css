@@ -326,7 +326,7 @@ section {
     justify-content: center;
 }
 
-.experience-modal-buttons li button{
+.experience-modal-buttons li button {
     padding: 0.15em;
     margin-bottom: 0.75em;
     cursor: pointer;
@@ -829,6 +829,11 @@ footer {
         align-self: flex-start;
         width: 375px;
         min-width: 150px;
+
+    }
+
+    .experience-modal-buttons li button {
+        text-align: left;
     }
 
     .experience-modal {
