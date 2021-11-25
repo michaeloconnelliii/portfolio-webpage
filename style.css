@@ -332,6 +332,7 @@ section {
     cursor: pointer;
     background: none;
     font-size: var(--body-size);
+
 }
 
 .experience-modal-buttons li button:hover,
@@ -344,6 +345,8 @@ section {
 .unselected {
     border: none;
     color: var(--body-white);
+
+    border: solid 2px transparent;
 }
 
 .selected {
@@ -829,7 +832,7 @@ footer {
     }
 
     .experience-modal {
-        max-width: 820px;
+        width: 820px;
     }
 
     /* ========= Projects ========= */
@@ -854,7 +857,7 @@ footer {
 @media (min-width: 1400px) {
     /* ========= Experience ========= */
     .experience-modal {
-        min-width: 790px;
+        width: 790px;
     }
 }
 
