@@ -428,6 +428,35 @@ hr.job-title-sep {
     background-image: url('images/portfolio-screenshot.webp');
 }
 
+.ramen-screenshot-container {
+    background-color: white;
+}
+
+.ramen-screenshot {
+    background-size: contain;
+}
+
+.nowebp .ramen-screenshot {
+    background-image: url('images/kurafuto-ramen.png');
+}
+
+.no-js .ramen-screenshot {
+    background-image: url('images/kurafuto-ramen.png');
+}
+
+.webp .ramen-screenshot {
+    background-image: url('images/kurafuto-ramen.webp');
+}
+
+.ramen-screenshot ul li a {
+    color: red;
+}
+
+.ramen-screenshot ul li a:hover,
+.ramen-screenshot ul li a:focus {
+    color: black;
+}
+
 .brevet-screenshot {
     background-position: top left;
 }
