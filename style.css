@@ -420,12 +420,32 @@ hr.job-title-sep {
     background-image: url('images/portfolio-screenshot.png');
 }
 
+.nowebp .worlds-best-cheese-screenshot {
+    background-image: url('images/worlds-best-cheese-proj.png')
+}
+
 .no-js .portfolio-screenshot {
     background-image: url('images/portfolio-screenshot.png');
 }
 
+.no-js .worlds-best-cheese-screenshot {
+    background-image: url('images/worlds-best-cheese-proj.png');
+}
+
 .webp .portfolio-screenshot {
     background-image: url('images/portfolio-screenshot.webp');
+}
+
+.webp .worlds-best-cheese-screenshot {
+    background-image: url('images/worlds-best-cheese-proj.webp');
+}
+
+.worlds-best-cheese-screenshot {
+    background-position: center;
+}
+
+.cheese-screenshot-container {
+    background-color: #557373;
 }
 
 .ramen-screenshot-container {
@@ -473,11 +493,11 @@ hr.job-title-sep {
     background-image: url('images/brevet_website_with_entries.webp');
 }
 
-.brevet-screenshot ul li a{
+.brevet-screenshot ul li a, .worlds-best-cheese-screenshot li a {
     color: black;
 }
 
-.brevet-screenshot ul li a:hover, .instaquack-screenshot ul li a:hover {
+.brevet-screenshot ul li a:hover, .instaquack-screenshot ul li a:hover, .worlds-best-cheese-screenshot li a:hover {
     color: var(--secondary-green);
 }
 
@@ -535,6 +555,7 @@ hr.job-title-sep {
 
 .project-title {
     text-align: center;
+    white-space: nowrap;
 }
 
 .project-links {
