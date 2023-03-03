@@ -127,18 +127,16 @@ function onScroll() {
 }
 
 /* ======= Work and Experience Modal Changer ======= */
-const uoButton = document.getElementById('uo');
-const uoCisButton = document.getElementById('uo-cis');
-const uoLawButton = document.getElementById('uo-law');
+const ieqButton = document.getElementById('ieq');
 const pasButton = document.getElementById('pas');
+const uoButton = document.getElementById('uo');
 
 /* Change which modal is visible from clicking each of the buttons
    Button will stay selected indicating which button corresponds to which modal */
 let idButtonModal = {
+    'ieq': [ieqButton , 'ieq-modal'],
+    'pas': [pasButton, 'pas-modal'],
     'uo': [uoButton, 'uo-modal'],
-    'uo-cis': [uoCisButton , 'uo-cis-modal'],
-    'uo-law': [uoLawButton, 'uo-law-modal'],
-    'pas': [pasButton, 'pas-modal']
 };
 
 for(let id in idButtonModal) {

@@ -332,7 +332,6 @@ section {
     cursor: pointer;
     background: none;
     font-size: var(--body-size);
-
 }
 
 .experience-modal-buttons li button:hover,
@@ -362,12 +361,12 @@ section {
     padding: 1em;
 }
 
-.uo-modal, .uo-cis-modal, .uo-law-modal, .pas-modal {
+.uo-modal, .ieq-modal, .pas-modal {
     border: 4px solid var(--primary-green);
     min-width: 200px;
 }
 
-.uo-law-modal, .uo-cis-modal, .pas-modal {
+.ieq-modal, .pas-modal {
     display: none;
 }
 
