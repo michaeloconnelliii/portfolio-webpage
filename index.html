@@ -75,18 +75,32 @@
                 <h2>Education and Experience</h2>
                 <div class="experience-modal-container">
                     <ul class="experience-modal-buttons fa-ul">
-                        <!-- Keep UO opened by default -->
-                        <li><i class="fa-li fas fa-code"></i><button id="ieq" class="uo-button unselected">IEQ Technology</button></li>
+                        <!-- Keep IEQ opened by default -->
+                        <li><i class="fa-li fas fa-code"></i><button id="ieq" class="uo-button selected">IEQ Technology</button></li>
                         <li><i class="fa-li fas fa-sharp fa-solid fa-angle-up"></i><button id="pas" class="pas-button unselected">Palo Alto Software</button></li>
-                        <li><i class="fa-li fas fa-book"></i><button id="uo" class="uo-button selected">University of Oregon</button></li>
+                        <li><i class="fa-li fas fa-book"></i><button id="uo" class="uo-button unselected">University of Oregon</button></li>
                     </ul>
                     <div class="experience-modal ieq-modal">
                         <h3>IEQ Technology</h3>
                         <hr class="job-title-sep">
                         <ul class="job-activities">
                             <li>Worked from 3/22 to Present</li>
-                            <li>As a Full Stack Developer, I implemented tested and deployed new feature requests on a variety of different projects. I've also consistently contributed solutions and QA test criteria that were added to release packages on multiple projects.</li>
-                            <li>Through this position, I've learned how to be flexible and productive with a wide variety of tech stacks. I've also became more comfortable with leading and deploying software releases.</li>
+                            <li>As a Full Stack Developer, I've implemented, tested and deployed new feature requests, optimizations/improvements and bug fixes on many different projects.</li>
+                            <li>Some of my contributions
+                                <ul>
+                                    <li>Improved API endpoints by utilizing more efficient SQL queries and table optimizations. Resulted in speed increases of up to 100% (multiple minute endpoints down to seconds or milliseconds) and decreased database memory and CPU usage.</li>
+                                    <li>Set up and configured websites for internal testing and troubleshooting. This involved configuring Docker, Docker Compose, NGINX, IIS, Apache as well as setting up remote debugging (for example, XDebug for PHP Debugging).</li>
+                                    <li>Improved website security by implenting session-state authorization for API endpoints.</li>
+                                    <li>Repaired broken authorization mechanism where 3rd-party cookies were being blocked by new browser updates which prevented client from accessing their 3rd party media server. The solution was to have 3rd-party cookies retrieved server-side (authorization occuring in the backend) and added to the problematic http request headers. Resulted in client being able access server regardless of future browser updates.</li>
+                                    <li>Implemented multiple feature requests including
+                                        <ul>
+                                            <li>School/College credit swapping so online courses could be introduced to curriculum. Involved database schema updates, new stored procedures, new API endpoints and frontend UI/UX updates. Used SQL, .NET (C#, Webforms), JavaScript, HTML and CSS.</li>
+                                            <li>School/College lesson and question copying so new lessons/questions could be created from existing lessons/questions. Involved new stored procedures and new API endpoints. Used SQL and .NET (C#, Webforms).</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>Through this position, I've learned how to be flexible and productive with a wide variety of tech stacks. I've became more comfortable with collaborating with developers and the QA department. I've also gained experience leading and deploying software releases.</li>
                         </ul>
                     </div>
                     <div class="experience-modal pas-modal">
