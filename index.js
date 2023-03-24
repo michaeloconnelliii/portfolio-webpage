@@ -126,6 +126,29 @@ function onScroll() {
     }
 }
 
+/* ======= Slide in effect as user moves into focus with Section ======= */
+const sections = document.querySelectorAll('.full-section-container');
+
+const options = {
+  root: null,
+  threshold: 0,
+  rootMargin: "-1px"
+};
+
+const observer = new IntersectionObserver(entries => {  
+  entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        entry.target.classList.toggle('encountered')
+        observer.unobserve(entry.target);
+      }
+  });
+}, options);
+
+
+sections.forEach(section => {
+  observer.observe(section)
+});
+
 /* ======= Work and Experience Modal Changer ======= */
 const ieqButton = document.getElementById('ieq');
 const pasButton = document.getElementById('pas');
