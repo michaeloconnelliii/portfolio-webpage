@@ -163,3 +163,11 @@ for(let id in idButtonModal) {
         }
     });
 }
+
+/* ======= Work and Experience IEQ Modal Contributions toggling ======= */
+const ieqContributionsBtn = document.getElementById('ieq-contributions-button');
+const ieqContributionsList = document.getElementById('ieq-contributions-list');
+
+// initially closed, toggle open/close on click after
+ieqContributionsList.classList.add('ieq-contributions-list-closed');
+ieqContributionsBtn.addEventListener('click', () => ieqContributionsList.classList.toggle('ieq-contributions-list-closed'));
