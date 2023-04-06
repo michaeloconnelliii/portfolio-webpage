@@ -1,21 +1,19 @@
-/* ========= TODO ============ 
-* Finish fixing Lighthouse Mobile Performance Errors 
-*/
-
 /* ========= Font Awesome ========= */
 .fa {
     font-weight: 900;
 }
 
 .fa-li {
-    color: var(--primary-green);
+    color: var(--secondary-blue);
 }
 
 /* ========= Global Styles ========= */
 :root {
-    --background-color: #222629;
-    --primary-green: #86c232; 
-    --secondary-green: #61892f;
+    --primary-black: #000000;
+    --primary-blue: #0045f6;
+    --secondary-blue: #00cfff;
+    --secondary-blue-alpha: rgb(0,207,255, 0.1);
+    --secondary-blue-alpha-light: rgb(0,207,255, 0.05);
     --header-white: #F1F1EF;
     --body-white: #eff0ea;
     --intro-white: rgba(241, 241, 239, 0.8);
@@ -46,8 +44,7 @@ header {
     height: 70px;
     padding: 1em;
     font-family: 'Nunito', sans-serif;
-    /* background color with alpha */
-    background: rgba(34, 38, 41, .95);
+    background: var(--primary-black);
     /* Font Awesome has default of 4, this is to prevent icons bleeding into header */
     z-index: 5; 
 }
@@ -65,7 +62,7 @@ header {
 
 nav {
     position: fixed;
-    background: #16181a;
+    background: var(--primary-black);
     left: 40%;
     right: 0;
     top: 0;
@@ -180,7 +177,7 @@ nav ul a {
 }
 
 .section-selected {
-    color:var(--primary-green);
+    color:var(--secondary-blue);
 }
 
 /* ========= Logo ========= */
@@ -193,16 +190,16 @@ nav ul a {
     top: 1em;
     width: 45px;
     height: 45px;
-    border: 3px solid var(--primary-green);
+    border: 3px solid var(--secondary-blue);
     border-radius: 100%;
     font-size: 1em;
     font-weight: 700;
-    color: var(--primary-green);
+    color: var(--secondary-blue);
 }
 
 .logo-initials:hover,
 .logo-initials:focus {
-    background: rgba(134, 194, 50, 0.1);
+    background: var(--secondary-blue-alpha);
     cursor: pointer;
     outline: black;
 }
@@ -214,20 +211,20 @@ nav ul a {
     top: 50px;
     height: 2.75px;
     width: 40px;
-    background: radial-gradient(rgb(134, 194, 50), rgba(134, 194, 50, 0.05));    
+    background: radial-gradient(var(--secondary-blue), var(--secondary-blue-alpha-light));    
     border-radius: 100%;
 }
 
 /* ========= Main Content ========= */
 
 body {
-    background: #222629;
+    background: var(--primary-black);
     color: var(--body-white);
 }
 
 a {
     color: var(--body-white);
-    text-decoration-color: var(--primary-green);
+    text-decoration-color: var(--secondary-blue);
 }
 
 section {
@@ -259,29 +256,31 @@ section {
 }
 
 .position {
-    color: var(--primary-green);
+    color: var(--secondary-blue);
     font-weight: bolder;
 }
 
-.aurora-img {
+.golden-gate-bridge-img {
     background-size: cover;
-    background-position: bottom;
+    background-position: top;
+    background-attachment: scroll;
     object-fit: contain;
-    border: 5px solid var(--primary-green);
+    overflow: auto;
+    border: 1px solid var(--primary-blue);
     width: 100%;
-    height: 200px;
+    height: 375px;
 }
 
-.nowebp .aurora-img {
-    background-image: url('images/aurora-borealis.jpg');
+.nowebp .golden-gate-bridge-img {
+    background-image: url('images/golden-gate-bridge-at-night.jpg');
 }
 
-.webp .aurora-img {
-    background-image: url('images/aurora-borealis.webp');
+.webp .golden-gate-bridge-img {
+    background-image: url('images/golden-gate-bridge-at-night.webp');
 }
 
-.no-js .aurora-img {
-    background-image: url('images/aurora-borealis.jpg');
+.no-js .golden-gate-bridge-img {
+    background-image: url('images/golden-gate-bridge-at-night.jpg');
 }
 
 .img-square-container {
@@ -305,7 +304,7 @@ section {
 .img-container {
     width: 150px;
     height: 150px;
-    border: 10px solid var(--secondary-green);
+    border: 2px solid var(--primary-blue);
     background-size: cover;
     background-position: center;
 }
@@ -350,7 +349,7 @@ section {
 .experience-modal-buttons li button:hover,
 .experience-modal-buttons li button:focus {
     outline: none;
-    border: 2px solid var(--primary-green);
+    border: 2px solid var(--primary-blue);
     color: var(--body-white);
 }
 
@@ -360,7 +359,7 @@ section {
 }
 
 .selected {
-    border: 2px solid var(--primary-green);
+    border: 2px solid var(--primary-blue);
 }
 
 .course-list {
@@ -372,7 +371,7 @@ section {
 }
 
 .uo-modal, .ieq-modal, .pas-modal {
-    border: 4px solid var(--primary-green);
+    border: 4px solid var(--primary-blue);
     min-width: 200px;
 }
 
@@ -382,7 +381,7 @@ section {
 
 hr.job-title-sep {
     border-radius: 2px;
-    border: 1.5px solid var(--primary-green);
+    border: 1.5px solid var(--primary-blue);
 }
 
 .job-activities, 
@@ -397,7 +396,7 @@ hr.job-title-sep {
     display: inline-block;
     width: 1em;
     margin-left: -1em;
-    color: var(--primary-green);
+    color: var(--secondary-blue);
 }
 
 .job-activities li {
@@ -406,7 +405,7 @@ hr.job-title-sep {
 
 .ieq-contributions-button {
     background: none;
-	color: var(--primary-green);
+	color: var(--secondary-blue);
 	border: 2px solid transparent;
 	padding: 0;
 	font: inherit;
@@ -415,7 +414,7 @@ hr.job-title-sep {
 }
 
 .ieq-contributions-button:hover {
-    border: 2px solid var(--primary-green);
+    border: 2px solid var(--primary-blue);
 }
 
 .ieq-contributions-list-closed {
@@ -443,24 +442,12 @@ hr.job-title-sep {
     align-items: flex-end;
 }
 
-.nowebp .portfolio-screenshot {
-    background-image: url('images/portfolio-screenshot.png');
-}
-
 .nowebp .worlds-best-cheese-screenshot {
     background-image: url('images/worlds-best-cheese-proj.png')
 }
 
-.no-js .portfolio-screenshot {
-    background-image: url('images/portfolio-screenshot.png');
-}
-
 .no-js .worlds-best-cheese-screenshot {
     background-image: url('images/worlds-best-cheese-proj.png');
-}
-
-.webp .portfolio-screenshot {
-    background-image: url('images/portfolio-screenshot.webp');
 }
 
 .webp .worlds-best-cheese-screenshot {
@@ -473,59 +460,6 @@ hr.job-title-sep {
 
 .cheese-screenshot-container {
     background-color: #557373;
-}
-
-.ramen-screenshot-container {
-    background-color: white;
-}
-
-.ramen-screenshot {
-    background-size: contain;
-}
-
-.nowebp .ramen-screenshot {
-    background-image: url('images/kurafuto-ramen.png');
-}
-
-.no-js .ramen-screenshot {
-    background-image: url('images/kurafuto-ramen.png');
-}
-
-.webp .ramen-screenshot {
-    background-image: url('images/kurafuto-ramen.webp');
-}
-
-.ramen-screenshot ul li a {
-    color: red;
-}
-
-.ramen-screenshot ul li a:hover,
-.ramen-screenshot ul li a:focus {
-    color: black;
-}
-
-.brevet-screenshot {
-    background-position: top left;
-}
-
-.nowebp .brevet-screenshot {
-    background-image: url('images/brevet_website_with_entries.png');
-}
-
-.no-js .brevet-screenshot {
-    background-image: url('images/brevet_website_with_entries.png');
-}
-
-.webp .brevet-screenshot {
-    background-image: url('images/brevet_website_with_entries.webp');
-}
-
-.brevet-screenshot ul li a, .worlds-best-cheese-screenshot li a {
-    color: black;
-}
-
-.brevet-screenshot ul li a:hover, .instaquack-screenshot ul li a:hover, .worlds-best-cheese-screenshot li a:hover {
-    color: var(--secondary-green);
 }
 
 .blackjack-screenshot {
@@ -554,30 +488,6 @@ hr.job-title-sep {
 
 .webp .blackjack-screenshot-container {
     background-color: #005a10;
-}
-
-.instaquack-screenshot {
-    background-size: contain;
-}
-
-.nowebp .instaquack-screenshot {
-    background-image: url('images/instaquack.png');
-}
-
-.no-js .instaquack-screenshot {
-    background-image: url('images/instaquack.png');
-}
-
-.webp .instaquack-screenshot {
-    background-image: url('images/instaquack.webp');
-}
-
-.instaquack-screenshot-container {
-    background-color: white;
-}
-
-.instaquack-screenshot ul li a{
-    color: black;
 }
 
 .project-title {
@@ -620,12 +530,12 @@ hr.job-title-sep {
     background: none;
     padding: 0.05em;
     color: var(--body-white);
-    border: 2px solid var(--primary-green);
+    border: 2px solid var(--primary-blue);
 }
 
 .contact-button:hover,
 .contact-button:focus {
-    background: rgba(134, 194, 50, 0.1);
+    background: var(--secondary-blue-alpha);
     outline: none;
 }
 
@@ -667,7 +577,7 @@ body {
 h1, h2, h3, .front-page-introduction {
     font-family: 'Nunito', sans-serif;
     font-weight: 700;
-    color: var(--header-white);
+    color: var(--body-white);
 }
 
 h1, .front-page-introduction {
@@ -807,8 +717,7 @@ footer {
         height: 70px;
         padding: 1em;
         font-family: 'Nunito', sans-serif;
-        /* background color with alpha */
-        background: rgba(34, 38, 41, .95);
+        background: var(--primary-black);
         /* Font Awesome has default of 4, this is to prevent icons bleeding into header */
         z-index: 5; 
     }
@@ -948,7 +857,7 @@ footer {
 @media (hover: hover) {
     a:hover,
     a:focus {
-        color:var(--primary-green);
+        color:var(--secondary-blue);
         outline: none;
     }
 }
