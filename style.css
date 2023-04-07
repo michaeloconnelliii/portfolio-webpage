@@ -132,7 +132,7 @@ section {
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-    background: var(--primary-green);
+    background: var(--secondary-blue);
     width: 2em;
     height: 3px;
     border-radius: 1em;
@@ -145,7 +145,7 @@ section {
     position: absolute;
     left: 0;
     right: 0;
-    background: var(--primary-green);
+    background: var(--secondary-blue);
 }
 
 .hamburger::before {
