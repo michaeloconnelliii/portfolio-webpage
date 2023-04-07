@@ -1,6 +1,7 @@
 /* ========= Font Awesome ========= */
 .fa {
     font-weight: 900;
+    text-rendering: optimizeLegibility;
 }
 
 .fa-li {
