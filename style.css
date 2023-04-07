@@ -1,7 +1,7 @@
 /* ========= Font Awesome ========= */
 .fa {
     font-weight: 900;
-    text-rendering: optimizeLegibility;
+    font-family: "Font Awesome 5 Brands";
 }
 
 .fa-li {
