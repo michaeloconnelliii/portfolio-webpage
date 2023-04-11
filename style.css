@@ -10,14 +10,14 @@
 
 /* ========= Global Styles ========= */
 :root {
-    --primary-black: #000000;
+    --primary-black: #0D0E0E;
     --primary-blue: #0045f6;
     --secondary-blue: #00cfff;
     --secondary-blue-alpha: rgb(0,207,255, 0.1);
     --secondary-blue-alpha-light: rgb(0,207,255, 0.05);
-    --header-white: #F1F1EF;
-    --body-white: #eff0ea;
-    --intro-white: rgba(241, 241, 239, 0.8);
+    --header-white: #ffffff;
+    --body-white: #f8f8ff;
+    --intro-white: rgba(255, 255, 255, 0.813);
     --name-size: 1.2rem;
     --h1-size: 1rem;
     --h2-size: 1.2rem;
