@@ -272,7 +272,6 @@ section {
     background-attachment: scroll;
     object-fit: contain;
     overflow: auto;
-    border: 1px solid var(--primary-blue);
     width: 100%;
     height: 375px;
 }
@@ -310,7 +309,6 @@ section {
 .img-container {
     width: 150px;
     height: 150px;
-    border: 2px solid var(--primary-blue);
     background-size: cover;
     background-position: center;
 }
@@ -377,7 +375,6 @@ section {
 }
 
 .uo-modal, .ieq-modal, .pas-modal {
-    border: 4px solid var(--primary-blue);
     min-width: 200px;
 }
 
