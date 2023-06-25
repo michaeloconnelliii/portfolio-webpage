@@ -384,7 +384,8 @@ section {
 
 hr.job-title-sep {
     border-radius: 2px;
-    border: 1.5px solid var(--primary-blue);
+    border: 1px solid var(--secondary-blue-alpha-light);
+    box-shadow: 1px 1px 5px var(--primary-blue);
 }
 
 .job-activities, 
