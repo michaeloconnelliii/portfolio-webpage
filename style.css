@@ -458,6 +458,26 @@ hr.job-title-sep {
     background-image: url('images/worlds-best-cheese-proj.webp');
 }
 
+.nowebp .empty-fridge-screenshot {
+    background-image: url('images/empty-fridge.png')
+}
+
+.no-js .empty-fridge-screenshot {
+    background-image: url('images/empty-fridge.png');
+}
+
+.webp .empty-fridge-screenshot {
+    background-image: url('images/empty-fridge.webp');
+}
+
+.empty-fridge-screenshot {
+    background-size: contain;
+}
+
+.empty-fridge-screenshot-container {
+    background-color: #c4e0ec;
+}
+
 .worlds-best-cheese-screenshot {
     background-position: center;
 }
@@ -508,6 +528,14 @@ hr.job-title-sep {
 
 .project-links li {
     margin-right: 2em;
+}
+
+.empty-fridge-project-links li a {
+    color: var(--primary-black);
+}
+
+.empty-fridge-project-links li a:hover {
+    color: var(--secondary-blue);
 }
 
 /* ========= Contact ========= */
