@@ -48,7 +48,6 @@ header {
     min-width: 200px;
     height: 70px;
     padding: 1em;
-    font-family: 'Nunito', sans-serif;
     background: var(--primary-black);
     /* Font Awesome has default of 4, this is to prevent icons bleeding into header */
     z-index: 5; 
@@ -601,13 +600,12 @@ hr.job-title-sep {
 /* ========= Typography ========= */
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Raleway', sans-serif;    
     font-size: var(--body-size);
     letter-spacing: 0.4px;
 }
 
 h1, h2, h3, .front-page-introduction {
-    font-family: 'Nunito', sans-serif;
     font-weight: 700;
     color: var(--body-white);
 }
@@ -747,7 +745,6 @@ footer {
         min-width: 200px;
         height: 70px;
         padding: 1em;
-        font-family: 'Nunito', sans-serif;
         background: var(--primary-black);
         /* Font Awesome has default of 4, this is to prevent icons bleeding into header */
         z-index: 5; 
