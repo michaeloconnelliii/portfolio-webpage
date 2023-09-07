@@ -249,6 +249,13 @@ section {
     min-height: 100vh;
 }
 
+.front-center-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .front-page-introduction {
     margin-bottom: 0;
 }
@@ -256,13 +263,12 @@ section {
 .name {
     display: block;
     font-size: var(--name-size);
-    font-weight: 700;
+    font-weight: bolder;
     color: var(--header-white);
 }
 
 .position {
     color: var(--secondary-blue);
-    font-weight: bolder;
 }
 
 .golden-gate-bridge-img {
@@ -556,7 +562,7 @@ hr.job-title-sep {
 .contact-button {
     width: 40%;
     max-width: 300px;
-    font-size: var(--h1-size);
+    font-size: var(--h3-size);
     cursor: pointer;
     background: none;
     padding: 0.05em;
@@ -618,6 +624,7 @@ h1, .front-page-introduction {
 .front-page-introduction {
     font-size: var(--h1-size);
     font-weight: 700;
+    white-space: nowrap;
 }
 
 h2 {
@@ -635,12 +642,6 @@ footer {
 /* ========= Media Queries ========= */
 
 /* mobile layout */
-@media (max-height: 635px) {
-    .front-page {
-        justify-content: flex-start;
-    }
-}
-
 @media (max-width: 260px) and (max-height: 635px) {
     .front-page {
         padding-top: 4em;
@@ -650,11 +651,11 @@ footer {
 
 @media (min-width: 260px) {
     :root {
-        --name-size: 1.65rem;
-        --h1-size: 1rem;
-        --h2-size: 1.45rem;
-        --h3-size: 1.15rem;
-        --body-size: 0.9rem;
+        --name-size: 1.25rem;
+        --h1-size: 0.95rem;
+        --h2-size: 1.2rem;
+        --h3-size: 1rem;
+        --body-size: 0.85rem;
         --nav-size: 1.3rem;
         --footer-size: 0.8rem;
         --contact-size: 0.9rem
@@ -687,17 +688,30 @@ footer {
 
     @media(min-height: 715px) {
         :root {
-            --name-size: 2.285rem;
+            --name-size: 2.5rem;
             --body-size: 1.1rem;
-            --h1-size: 1.25rem;
-            --h2-size: 2.25rem;
+            --h1-size: 1.35rem;
+            --h2-size: 2rem;
             --h3-size: 1.25rem;
             --nav-size: 1.5rem;
             --footer-size: 1rem;
-            --contact-size: 1.4rem
+            --contact-size: 1rem
         }
     }
  }
+
+ @media (min-width: 400px) {
+    :root {
+        --name-size: 1.5rem;
+        --h1-size: 1.25rem;
+        --h2-size: 1.45rem;
+        --h3-size: 1.15rem;
+        --body-size: 0.9rem;
+        --nav-size: 1.3rem;
+        --footer-size: 0.8rem;
+        --contact-size: 0.9rem
+    }
+}
 
  @media (min-width: 475px) {
     nav {
@@ -718,16 +732,16 @@ footer {
  }
 
 /* desktop layout */
-@media (min-width: 700px) {
+@media (min-width: 600px) {
     :root {
-        --name-size: 3.25rem;
-        --body-size: 1.35rem;
-        --h1-size: 1.7rem;
-        --h2-size: 2.7rem;
-        --h3-size: 1.6rem;
-        --nav-size: 1.1rem;
-        --footer-size: 1.3rem;
-        --contact-size: 1.4rem
+        --name-size: 3rem;
+        --body-size: 1.15rem;
+        --h1-size: 2rem;
+        --h2-size: 2.25rem;
+        --h3-size: 1.3rem;
+        --nav-size: 0.885rem;
+        --footer-size: 1rem;
+        --contact-size: 1.2rem
     }
 
     .logo-initials {
@@ -780,12 +794,6 @@ footer {
     }
 
     /* ========= Front Page ========= */
-    .front-center-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
     .small-section-container {
         max-width: 900px;
     }
@@ -808,6 +816,19 @@ footer {
         max-width: 750px;
         /* Allows all project containers to be the same width */
         flex-basis: 100%;
+    }
+}
+
+@media (min-width: 700px) {
+    :root {
+        --name-size: 3.25rem;
+        --body-size: 1.25rem;
+        --h1-size: 2.25rem;
+        --h2-size: 2.7rem;
+        --h3-size: 1.6rem;
+        --nav-size: 1.1rem;
+        --footer-size: 1.15rem;
+        --contact-size: 1.35rem
     }
 }
 
@@ -863,13 +884,6 @@ footer {
 
     .project-container {
         margin-right: 2em;
-    }
-}
-
-@media (min-width: 1200px) {
-    :root {
-        --name-size: 4rem;
-        --h1-size: 1.8rem;
     }
 }
 
