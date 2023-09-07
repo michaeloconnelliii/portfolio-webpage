@@ -65,7 +65,7 @@ for(let link of navLinks) {
     let sectionId = link.getAttribute('href');
 
     // Exclude Resume
-    if(sectionId !== "./Michael-O'Connell-Resume-Dark.pdf") {
+    if(sectionId !== "./Michael-O'Connell-Resume.pdf") {
         sectionId = sectionId.substring(1);
         sectionToObjects[sectionId] = [document.getElementById(sectionId), link];
     }
