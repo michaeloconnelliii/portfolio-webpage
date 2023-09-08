@@ -559,21 +559,8 @@ hr.job-title-sep {
     text-align: center;
 }
 
-.contact-button {
-    width: 40%;
-    max-width: 300px;
-    font-size: var(--h3-size);
+.contact-link {
     cursor: pointer;
-    background: none;
-    padding: 0.05em;
-    color: var(--body-white);
-    border: 2px solid var(--primary-blue);
-}
-
-.contact-button:hover,
-.contact-button:focus {
-    background: var(--secondary-blue-alpha);
-    outline: none;
 }
 
 /* ========= Footer ========= */
@@ -604,9 +591,11 @@ hr.job-title-sep {
 }
 
 /* ========= Typography ========= */
+:root {
+    font-family: 'Raleway', sans-serif;    
+}
 
 body {
-    font-family: 'Raleway', sans-serif;    
     font-size: var(--body-size);
     letter-spacing: 0.4px;
 }
