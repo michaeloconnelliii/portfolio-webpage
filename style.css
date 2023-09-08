@@ -29,7 +29,6 @@
     --body-size: 0.7rem;
     --nav-size: 1rem;
     --footer-size: 0.55rem;
-    --contact-size: 1.1rem
 }
 
 * {
@@ -535,26 +534,6 @@ hr.job-title-sep {
     color: var(--secondary-blue);
 }
 
-/* ========= Contact ========= */
-.contact {
-    min-height: 35vh;
-}
-
-.contact-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: var(--contact-size);
-}
-
-.contact p {
-    text-align: center;
-}
-
-.contact-link {
-    cursor: pointer;
-}
-
 /* ========= Footer ========= */
 .footer-container {
     display: flex;
@@ -563,11 +542,16 @@ hr.job-title-sep {
     align-items: center;
 }
 
+.contact-header {
+    font-size: var(--h3-size);
+    margin-bottom: 0;
+}
+
 .footer-social {
     list-style: none;
     padding: 0;
     margin: 0;
-    margin-top: 1em;
+    margin-top: 0.5em;
 
     display: flex;
     flex-direction: row;
@@ -640,7 +624,6 @@ footer {
         --body-size: 0.85rem;
         --nav-size: 1.3rem;
         --footer-size: 0.8rem;
-        --contact-size: 0.9rem
     }
     /* ====== About Me ====== */
     .img-container {
@@ -677,7 +660,6 @@ footer {
             --h3-size: 1.25rem;
             --nav-size: 1.5rem;
             --footer-size: 1rem;
-            --contact-size: 1rem
         }
     }
  }
@@ -691,7 +673,6 @@ footer {
         --body-size: 0.9rem;
         --nav-size: 1.3rem;
         --footer-size: 0.8rem;
-        --contact-size: 0.9rem
     }
 }
 
@@ -723,7 +704,6 @@ footer {
         --h3-size: 1.3rem;
         --nav-size: 0.885rem;
         --footer-size: 1rem;
-        --contact-size: 1.2rem
     }
 
     .logo-initials {
@@ -810,7 +790,6 @@ footer {
         --h3-size: 1.6rem;
         --nav-size: 1.1rem;
         --footer-size: 1.15rem;
-        --contact-size: 1.35rem
     }
 }
 
