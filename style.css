@@ -267,31 +267,29 @@ section {
     color: var(--header-white);
 }
 
+/* Typing Effect */
 .position {
     color: var(--secondary-blue);
 }
 
-.golden-gate-bridge-img {
-    background-size: cover;
-    background-position: top;
-    background-attachment: scroll;
-    object-fit: contain;
-    overflow: auto;
-    width: 100%;
-    height: 375px;
+.typed-out{
+    overflow: hidden;
+    border-right: .15em solid var(--body-white);
+    white-space: nowrap;
+    animation: typing 3.25s steps(40, end), blink-caret 1s step-end infinite 3.25s;
+    margin-left: 0.25em;
 }
 
-.nowebp .golden-gate-bridge-img {
-    background-image: url('images/golden-gate-bridge-at-night.jpg');
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
 }
 
-.webp .golden-gate-bridge-img {
-    background-image: url('images/golden-gate-bridge-at-night.webp');
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--body-white); }
 }
 
-.no-js .golden-gate-bridge-img {
-    background-image: url('images/golden-gate-bridge-at-night.jpg');
-}
 
 .img-square-container {
     align-self: center;
@@ -614,6 +612,7 @@ h1, .front-page-introduction {
     font-size: var(--h1-size);
     font-weight: 700;
     white-space: nowrap;
+    display: flex;
 }
 
 h2 {
