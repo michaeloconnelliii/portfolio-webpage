@@ -351,22 +351,14 @@ section {
     background: none;
     font-size: var(--body-size);
     color: var(--body-white);
-}
-
-.experience-modal-buttons li button:hover,
-.experience-modal-buttons li button:focus {
-    outline: none;
-    border: 2px solid var(--primary-blue);
-    color: var(--body-white);
-}
-
-.unselected {
     border: none;
     border: solid 2px transparent;
 }
 
-.selected {
-    border: 2px solid var(--primary-blue);
+.experience-modal-buttons li button:hover {
+    outline: none;
+    text-decoration: underline;
+    text-decoration-color: var(--secondary-blue);
 }
 
 .course-list {
@@ -412,8 +404,10 @@ hr.job-title-sep {
 
 .ieq-contributions-button {
     background: none;
-	color: var(--secondary-blue);
+	color: var(--body-white);
 	border: 2px solid transparent;
+    text-decoration: underline;
+    text-decoration-color: var(--secondary-blue);
 	padding: 0;
 	font: inherit;
 	cursor: pointer;
@@ -421,7 +415,7 @@ hr.job-title-sep {
 }
 
 .ieq-contributions-button:hover {
-    border: 2px solid var(--primary-blue);
+    color: var(--secondary-blue);
 }
 
 .ieq-contributions-list-closed {

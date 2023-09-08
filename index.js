@@ -164,10 +164,6 @@ let idButtonModal = {
 
 for(let id in idButtonModal) {
     idButtonModal[id][0].addEventListener('click', (event) => {
-        // select clicked button
-        event.target.classList.add('selected');
-        event.target.classList.remove('unselected');
-
         // show corresponding modal
         let modal = document.getElementsByClassName(idButtonModal[id][1])[0];
         modal.style.display = 'block';
