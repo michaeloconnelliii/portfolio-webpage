@@ -7,8 +7,8 @@
         <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">        
-        <link rel="icon" href="images/logo-32x32.png" type="image/png">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+        <link rel="icon" href="images/logo-no-bg.png" type="image/png">
         <title>Michael O'Connell's Portfolio</title>
         <meta name="description" content="Michael O'Connell has a breadth of knowledge in Computer Science and Web Development. He is passionate about all things related to web and software development.">
     </head>
@@ -28,27 +28,31 @@
             <nav>
                 <ul id="nav-list">
                     <li><a id="about-link" class="nav-link" href="#about">About</a></li>
-                    <li><a id="experience-link" class="nav-link" href="#experience">Experience</a></li>
                     <li><a id="projects-link" class="nav-link" href="#projects">Projects</a></li>
                     <li><a id="contact-link" class="nav-link" href="#contact">Contact</a></li>
-                    <li><a class="nav-link" href="./Michael-O'Connell-Resume.pdf">Resume</a></li>
+                    <li><a class="nav-link" href="./Michael-O'Connell-Resume.pdf" download>Resume</a></li>
                 </ul>
             </nav>
         </header>
         <main>
             <section class="front-page">
                 <div class="front-center-container">
-                    <p class="front-page-introduction name">Hi, I'm Michael O'Connell.</p>
-                    <h1 class="front-page-introduction">I'm a<strong class="position typed-out">Full Stack Web Developer.</strong></h1>
+                    <div class="front-center-intro-text-container">
+                        <p class="front-page-introduction">Hi, I'm Michael O'Connell.</p>
+                        <h1 class="front-page-introduction">I'm a&nbsp<strong class="position">Full Stack Web Developer</strong>.</h1>
+                    </div>
                 </div>
             </section>
-            <section id="about">
-                <h2>About Me</h2>
+            <div class="resume-button-container">
+               <a href="./Michael-O'Connell-Resume.pdf" download><button class="resume-button">Download My Resume&nbsp<i class="fa fa-download"></i></button></a>
+            </div>
+            <section class="about" id="about">
                 <div class="center-container full-section-container slide-in">
                     <div class="small-section-container">
+                        <h2>About</h2>
                         <p>I grew up in Eugene, Oregon. I recieved a Bachelor's degree from the University of Oregon majoring in Computer and Information Science. I have a passion for building full stack web applications and I'm always researching and playing with web technology. When I'm not programming or learning a new tool, I love cooking and spending time outdoors.</p>
                         <div class="technology-list">
-                            <h3>Technologies I've been using recently:</h3>
+                            <h3>Technologies I've been using recently</h3>
                             <ul class="technology-experience fa-ul">
                                 <li><i class="fa-li fab fa-html5"></i>HTML</li>
                                 <li><i class="fa-li fab fa-css3-alt"></i>CSS</li>
@@ -78,83 +82,6 @@
                     </div>
                 </div>
             </section>
-            <section id="experience" class="experience">
-                <h2>Education and Experience</h2>
-                <div class="experience-modal-container full-section-container slide-in">
-                    <ul class="experience-modal-buttons fa-ul">
-                        <!-- Keep IEQ opened by default -->
-                        <li><i class="fa-li fas fa-code"></i><button id="ieq" class="uo-button selected">IEQ Technology</button></li>
-                        <li><i class="fa-li fas fa-sharp fa-solid fa-angle-up"></i><button id="pas" class="pas-button unselected">Palo Alto Software</button></li>
-                        <li><i class="fa-li fas fa-book"></i><button id="uo" class="uo-button unselected">University of Oregon</button></li>
-                    </ul>
-                    <div class="experience-modal ieq-modal">
-                        <h3>IEQ Technology</h3>
-                        <hr class="job-title-sep">
-                        <ul class="job-activities">
-                            <li>Worked from 3/22 to Present</li>
-                            <li>As a Full Stack Web Developer, I maintain, troubleshoot, add features to and lead deployments on seven high-priority client applications.
-                                Applications use HTML, CSS (Bootstrap), JavaScript (JQuery, JQuery UI, Vue), C#, PHP, Java, .NET (ASP.NET
-                                Webforms, ASP.NET Web API), SQL, MySQL, IIS, NGINX, Apache, Docker, and Unity.</li>
-                            <li>Some of my <button id="ieq-contributions-button" class="ieq-contributions-button">contributions</button>
-                                <ul id="ieq-contributions-list">
-                                    <li>In a test taking and administering application, improved multiple high-traffic API endpoint response times from
-                                        minutes to seconds or milliseconds through optimizing SQL stored procedures. Resulted in a smoother
-                                        test-taking experience for thousands of students and instructors.</li>
-                                    <li>Set up and configured websites for internal testing and troubleshooting. This involved configuring Docker, Docker Compose, NGINX, IIS, Apache as well as setting up remote debugging (for example, XDebug for PHP Debugging).</li>
-                                    <li>Implemented multiple feature requests including
-                                        <ul>
-                                            <li>School/College credit swapping so online courses could be introduced to curriculum. Involved database schema updates, new stored procedures, new API endpoints and frontend UI/UX updates. Used SQL, .NET (C#, Webforms), JavaScript, HTML and CSS.</li>
-                                            <li>School/College lesson and question copying so new lessons/questions could be created from existing lessons/questions. Involved new stored procedures and new API endpoints. Used SQL and .NET (C#, Webforms).</li>
-                                            <li>Dynamic searching on school/college course lists so clients can fill out forms more efficiently. Involved creating reusable backend and frontend components. Used .NET (C#, User Controls), JavasScript, HTML and CSS.</li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>Through this position, I've learned how to be flexible and productive with a variety of technology. I've became more comfortable with collaborating with developers, managers and the QA department. I've also gained experience leading and deploying software releases.</li>
-                        </ul>
-                    </div>
-                    <div class="experience-modal pas-modal">
-                        <h3>Palo Alto Software</h3>
-                        <hr class="job-title-sep">
-                        <ul class="job-activities">
-                            <li>Worked from 08/21 to 12/21</li>
-                            <li>As a Web Development Intern, I contributed to Palo Alto's Marketing sites by adding new content, resolving bugs and creating new tickets and stories to address areas for improvement, specifically <a href="https://validator.w3.org/">W3C</a> and <a href="https://developers.google.com/web/tools/lighthouse">Lighthouse</a> compliance and automation.</li>
-                            <li>Through this position, I learned how to work using an Agile Workflow which included weekly estimation, code review and QA processing. I learned how to research oppertunities for company improvement and translate them into tickets and stories using <a href="https://www.atlassian.com/software/jira">Jira</a>. I also became much more familar with the macOS command line, Git, HTML, CSS, Sass, PHP and Javascript.</li>
-                            <li>
-                                Some of the sites I helped contribute to
-                                <ul>
-                                    <li><a href="https://www.paloalto.com/">Palo Alto Software</a></li>
-                                    <li><a href="https://www.liveplan.com/">Liveplan</a></li>
-                                    <li><a href="https://www.bplans.com/">BPlans</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="experience-modal uo-modal">
-                        <h3>University of Oregon</h3>
-                        <hr class="job-title-sep">
-                        <h4 class="job-title">Bachelor of Science in Computer and Information Science</h4>
-                        <ul class="job-activities">
-                            <li>Attended from 6/18 to 3/21</li>
-                            <li>GPA: 3.5</li>
-                            <li>Notable courses
-                                <ul>
-                                    <li>Software Methodologies (Software Engineering)</li>
-                                    <li>Secure Software Engineering</li>
-                                    <li>Computer and Network Security</li>
-                                    <li>Principles of Programming Languages</li>
-                                    <li>Operating Systems</li>
-                                    <li>Advanced Data Structures</li>
-                                    <li>Intermediate Algorithms</li>
-                                    <li>C/C++ & Unix</li>
-                                    <li>Computer Organization (Computer Architecture)</li>
-                                    <li>Artificial Intelligence</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
             <section id="projects" class="projects">
                 <h2>Projects</h2>
                 <div class="full-section-container slide-in">
@@ -173,41 +100,30 @@
                             <p class="project-description">This project helped me gain exposure to building a fullstack application with modern JavaScript libraries and using Open AI's Chat API.</p>
                         </div>
                     </div>
-                    <div class="split">
-                        <div class="project-container blackjack">
-                            <h3 class="project-title">Blackjack</h3>
-                                <div class="blackjack-screenshot-container">
-                                    <div class="project-screenshot blackjack-screenshot">
-                                        <ul class="project-links">
-                                            <li><a href="https://github.com/michaeloconnelliii/blackjack" aria-label="Github"><i class="fab fa-github fa-lg"></i></a></li>
-                                            <li><a href="https://master.d2zscjsufjabij.amplifyapp.com/" aria-label="Live Demo"><i class="fas fa-desktop"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            <p class="project-description">Blackjack game built using HTML, CSS and Javascript. It uses the <a href="https://deckofcardsapi.com/">Deck of Cards API</a> for generating the deck and handling cards.</p>
-                            <p class="project-description">This project helped me learn how to make Asynchronous requests and use Object Oriented Programming concepts in Javascript.</p>
-                        </div>
-                    </div>
-                    <div class="split">
-                        <div class="project-container cheese">
-                            <h3 class="project-title">World's Best Cheese Locations</h3>
-                            <div class="cheese-screenshot-container">
-                                <div class="project-screenshot worlds-best-cheese-screenshot">
-                                    <ul class="project-links">
-                                        <li><a href="https://github.com/michaeloconnelliii/world-cheese-awards" aria-label="Github"><i class="fab fa-github fa-lg"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <p class="project-description">Webpage built using HTML, CSS, Javascript, Flask (Python), MySQL, Google Maps API, and AnyChart API. The webpage displays the World Cheese Awards' Super Gold Award Winners locations and breakdown of winners by country.</p>
-                            <p class="project-description">This project was primarily a learning exercise for me to utilize a MySQL database in a small fullstack application.</p>
-                        </div>
-                    </div>
+                </div>
+            </section>
+            <section id="contact">
+                <h2>Contact</h2>
+                <div class="full-section-container slide-in">
+                    <form class="contact-form">
+                        <label class="form-label" for="firstname">First Name</label>
+                        <input class="contact-form-input" type="text" id="firstname" name="firstname" aria-invalid="false" aria-label="First Name" placeholder="">
+
+                        <label class="form-label" for="lastname">Last Name</label>
+                        <input class="contact-form-input" type="text" id="lastname" name="lastname" aria-invalid="false" aria-label="Last Name" placeholder="">
+
+                        <label class="form-label" for="email">Your Email</label>
+                        <input class="contact-form-input" type="text" id="email" name="email" aria-invalid="false" aria-label="Email Address" placeholder="">
+
+                        <label class="form-label" for="message">Message</label>
+                        <textarea class="contact-form-message" id="message" name="message" aria-invalid="false" aria-label="Message"></textarea>
+                        <button class="contact-form-submit-button" type="submit">Get in touch</button>
+                    </form>
                 </div>
             </section>
         </main>
-        <footer id="contact">
+        <footer>
             <div class="footer-container">
-                <h2 class="contact-header">Contact</h2>
                 <ul class="footer-social">
                     <li><a href="https://github.com/michaeloconnelliii" aria-label="Github"><i class="fab fa-github fa-lg"></i></a></li>
                     <li><a href="https://www.linkedin.com/in/michaeloconnelliii/" aria-label="LinkedIn"><i class="fab fa-linkedin fa-lg"></i></a></li>
