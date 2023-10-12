@@ -148,3 +148,34 @@ const observer = new IntersectionObserver(entries => {
 sections.forEach(section => {
   observer.observe(section)
 });
+
+
+/* -- EmailJS --*/
+function sendEmail(event) {
+  event.preventDefault();
+
+  const params = {
+    name: `${document.getElementById("firstname").value} ${document.getElementById("lastname").value}`,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value
+  }
+
+  const serviceID = "service_gmi5pdq";
+  const templateID = "template_rkd4b41";
+
+  emailjs.send(serviceID, templateID, params)
+    .then((res) => {
+      document.getElementById("firstname").value = "";
+      document.getElementById("lastname").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("message").value = "";
+
+      console.log(res);
+      alert("Your message sent successfully.");
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+
+  return false;
+};

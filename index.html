@@ -105,20 +105,20 @@
             <section id="contact">
                 <h2>Contact</h2>
                 <div class="full-section-container slide-in">
-                    <form class="contact-form">
+                    <form onsubmit="return sendEmail(event)" class="contact-form">
                         <label class="form-label" for="firstname">First Name</label>
-                        <input class="contact-form-input" type="text" id="firstname" name="firstname" aria-invalid="false" aria-label="First Name" placeholder="">
-
+                        <input class="contact-form-input" type="text" id="firstname" aria-invalid="false" aria-label="Name" placeholder="">
+                        
                         <label class="form-label" for="lastname">Last Name</label>
-                        <input class="contact-form-input" type="text" id="lastname" name="lastname" aria-invalid="false" aria-label="Last Name" placeholder="">
-
+                        <input class="contact-form-input" type="text" id="lastname" aria-invalid="false" aria-label="Name" placeholder="">
+                        
                         <label class="form-label" for="email">Your Email</label>
-                        <input class="contact-form-input" type="text" id="email" name="email" aria-invalid="false" aria-label="Email Address" placeholder="">
-
+                        <input class="contact-form-input" type="email" id="email" name="email" aria-invalid="false" aria-label="Email Address" placeholder="" required>
+                    
                         <label class="form-label" for="message">Message</label>
-                        <textarea class="contact-form-message" id="message" name="message" aria-invalid="false" aria-label="Message"></textarea>
+                        <textarea class="contact-form-message" id="message" name="body" aria-invalid="false" aria-label="Message" required></textarea>
                         <button class="contact-form-submit-button" type="submit">Get in touch</button>
-                    </form>
+                    </form>                    
                 </div>
             </section>
         </main>
@@ -134,6 +134,16 @@
             <!--Necessary so users can still see images if they have js turned off-->
             <script src="modernizer-detect-webp.js"></script>
             <script src="index.js"></script>
+            
+            <!-- Emailjs -->
+            <script type="text/javascript"
+                    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+            </script>
+            <script type="text/javascript">
+            (function(){
+                emailjs.init("RUKuNoNoysf9Yk8je");
+            })();
+            </script>
         </footer>
     </body>
 </html>
