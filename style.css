@@ -266,7 +266,10 @@ section {
     position: absolute;
     top: 0;
     bottom: 0;
-    backdrop-filter: brightness(50%);
+    left: 0;
+    right: 0;
+    height: 120vh;
+    backdrop-filter: brightness(60%);
 }
 
 .position {
@@ -279,6 +282,7 @@ section {
     justify-content: center;
     width: 100%;
     box-sizing: border-box;
+    z-index: 2;
 }
 
 .front-center-intro-text-container {
